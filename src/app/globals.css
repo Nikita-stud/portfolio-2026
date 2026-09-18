@@ -1,26 +1,122 @@
 @import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-gold: #e9b752;
+  --color-gold-darker: #78582a;
+  --color-gold-text: #c79543;
+  --color-dark: #020618;
+  --color-white: #f3fffb;
+  --color-grey: #b1afae;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --text-h1-mobile: 2.133rem;
+  --text-h2-mobile: 1.6rem;
+  --text-body-mobile: 1.2rem;
+
+  --text-h1-desktop: 3.333rem;
+  --text-h2-desktop: 2.5rem;
+  --text-body-desktop: 1.875rem;
+
+  --breakpoint-md: 744px;
+
+  --line-height-default: 1.2;
+
+  --font-cormorant: var(--font-cormorant);
+}
+@layer base {
+  * {
+    transition:
+      width 0.5s ease,
+      height 0.5s ease,
+      padding 0.5s ease,
+      margin 0.5s ease,
+      font-size 0.5s ease;
   }
-}
+  body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    background: var(--color-dark);
+    line-height: var(--line-height-default);
+  }
+  h1 {
+    font-weight: 300;
+    font-size: var(--text-h1-mobile);
+    font-family: var(--font-cormorant);
+    color: var(--color-white);
+  }
+  p {
+    font-size: var(--text-body-mobile);
+    color: var(--color-white);
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* ----- HEADER -----*/
+  header {
+    width: 100%;
+    padding: 50px 20px 30px 20px;
+    font-size: var(--text-body-mobile);
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  nav ul li {
+    color: var(--color-grey);
+  }
+
+  /*----- HERO ------*/
+  .frame {
+    border: 5px solid transparent;
+    border-image: linear-gradient(
+        to bottom left,
+        var(--color-gold-darker) 0%,
+        var(--color-gold) 50%,
+        var(--color-gold-darker) 100%
+      )
+      1;
+  }
+
+  @media (min-width: 744px) {
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: var(--header-width);
+      height: 100dvh;
+      padding: 50px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40dvh;
+
+      gap: 30px;
+    }
+    nav ul li {
+      transform: rotate(90);
+    }
+
+    /*----- HERO ------*/
+    .frame {
+      border: 10px solid transparent;
+      border-image: linear-gradient(
+          to bottom left,
+          var(--color-gold-darker) 0%,
+          var(--color-gold) 50%,
+          var(--color-gold-darker) 100%
+        )
+        1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    header {
+      font-size: var(--text-body-desktop);
+    }
+    h1 {
+      font-size: var(--text-h1-desktop);
+    }
+  }
 }
