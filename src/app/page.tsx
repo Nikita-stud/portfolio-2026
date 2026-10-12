@@ -24,7 +24,7 @@ export default function Home() {
             </div>
           </figure>
         </div>
-        <section className="mt-[20px] md:mt-[200px] lg:mt-[300px]">
+        <section className="mt-[20px] md:mt-[160px] md:z-10 lg:mt-[320px]">
           <h1>
             AS A <br />
             <span className="text-gold-text">
@@ -38,8 +38,9 @@ export default function Home() {
             <br /> ENGINEER
           </h1>
           <p className="font-cormorant text-h1-mobile lg:text-h1-desktop mt-[20px] font-[200] leading-(--line-height-default)">
-            I WELCOME YOU
-            <br /> TO THIS JOURNEY
+            I WELCOME <br className="hidden md:inline lg:hidden" />
+            YOU TO <br className="hidden md:inline lg:hidden" />
+            THIS JOURNEY
           </p>
         </section>
       </div>
