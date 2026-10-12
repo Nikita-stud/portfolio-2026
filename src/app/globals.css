@@ -29,7 +29,14 @@
       height 0.5s ease,
       padding 0.5s ease,
       margin 0.5s ease,
-      font-size 0.5s ease;
+      font-size 0.5s ease,
+      opacity 1s ease,
+      display 1s ease allow-discrete;
+  }
+  @starting-style {
+    * {
+      opacity: 0;
+    }
   }
   body {
     display: grid;
