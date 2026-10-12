@@ -22,6 +22,38 @@
 
   --font-cormorant: var(--font-cormorant);
 }
+@utility delay-show {
+  animation: show 0.5s ease 0.5s both;
+  @variant md {
+    animation-name: show-md;
+  }
+  @variant lg {
+    animation-name: show-lg;
+  }
+  @variant xl {
+    animation-name: show-xl;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes show-md {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes show-lg {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes show-xl {
+  from {
+    opacity: 0;
+  }
+}
 @layer base {
   * {
     transition:
@@ -32,6 +64,9 @@
       font-size 0.5s ease,
       opacity 1s ease,
       display 1s ease allow-discrete;
+  }
+  br {
+    transition: none;
   }
   @starting-style {
     * {
