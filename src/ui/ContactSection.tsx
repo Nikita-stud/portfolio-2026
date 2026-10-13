@@ -30,7 +30,10 @@ export default function ContactSection() {
         aria-hidden="true"
       ></span>
 
-      <ol className="grid grid-cols-4 mt-[30px] md:mr-[100px] lg:mr-[140px]">
+      <ol
+        aria-label="Steps from idea to launch"
+        className="grid grid-cols-4 mt-[30px] md:mr-[100px] lg:mr-[140px]"
+      >
         {steps.map((step, index) => (
           <li
             key={step.label}
@@ -38,21 +41,25 @@ export default function ContactSection() {
               index % 2 === 1 ? 'flex-col-reverse' : 'flex-col'
             }`}
           >
-            <figure className="frame aspect-square p-[5px] md:p-[10px]">
+            <div
+              className="frame aspect-square p-[5px] md:p-[10px]"
+              aria-hidden="true"
+            >
               <div className="relative w-full h-full overflow-hidden">
                 <Image
                   src={step.image}
                   alt=""
+                  loading="lazy"
                   fill
                   sizes="25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-            </figure>
+            </div>
             <div className="relative flex items-center justify-center h-[64px]">
               <span className="absolute left-0 right-1/2 h-[2px] bg-grey/30 transition-colors duration-500 group-hover:bg-gold in-[li:has(~li:hover)]:bg-gold group-first:hidden"></span>
               <span className="absolute left-1/2 right-0 h-[2px] bg-grey/30 transition-colors duration-500 in-[li:has(~li:hover)]:bg-gold group-last:hidden"></span>
-              <span className="relative px-[5px] py-[5px] bg-dark border border-gold-darker font-cormorant text-white transition-colors duration-500 group-hover:text-gold-text md:px-[10px]">
+              <span className="relative px-[5px] py-[5px] bg-dark border border-gold-darker font-text text-xs-mobile text-white transition-colors duration-500 group-hover:text-gold-text md:px-[10px]">
                 {step.label}
               </span>
             </div>

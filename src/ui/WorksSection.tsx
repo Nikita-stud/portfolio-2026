@@ -18,7 +18,7 @@ export default async function WorksSection() {
         WORKS
       </h2>
       <span
-        className="block w-full h-[1px] mt-[5px] mx-auto bg-gold md:mx-0 md:w-[550px]"
+        className="block w-full h-[1px] mt-[5px] mx-auto bg-gold md:mb-[30px] md:mx-0 md:w-[125px] lg:w-[190px]"
         aria-hidden="true"
       ></span>
       {categories.map((category) => (
@@ -31,7 +31,7 @@ export default async function WorksSection() {
             {category}
           </h3>
           <ul
-            className={`grid grid-cols-2 gap-[20px] mt-[20px] md:gap-[50px] ${
+            className={`grid grid-cols-2 gap-[20px] mt-[20px] md:gap-[50px] xl:grid-cols-3 ${
               category === 'Back-end' ? '[direction:rtl] *:[direction:ltr]' : ''
             }`}
           >
@@ -39,14 +39,14 @@ export default async function WorksSection() {
               .filter((work) => work.Category.name === category)
               .map((work) => (
                 <li key={work.id} className="flex flex-col">
-                  <article className="relative flex-1 flex flex-col p-[10px] -m-[10px] border border-transparent transition-colors duration-500 hover:border-gold">
+                  <article className="group relative flex-1 flex flex-col">
                     <figure className="relative aspect-video overflow-hidden">
                       <Image
                         src={work.thumbnail}
                         alt={`${work.name} thumbnail`}
                         fill
                         sizes="(min-width: 744px) 50vw, 100vw"
-                        className="object-cover"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </figure>
                     <h4
@@ -65,7 +65,7 @@ export default async function WorksSection() {
                       {work.teaser}
                     </p>
                     <span
-                      className="block font-cormorant text-gold-text mt-auto pt-[10px]"
+                      className="block font-text text-xs-mobile text-gold-darker mt-auto pt-[10px] transition-colors duration-500 group-hover:text-gold-text"
                       aria-hidden="true"
                     >
                       Read more
