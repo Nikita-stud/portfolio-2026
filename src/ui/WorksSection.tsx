@@ -1,16 +1,17 @@
-'use client';
 import Link from 'next/link';
+import Image from 'next/image';
+import db from '../../back-end/models';
+import type { Work } from '@/types';
+import { defaultWorks } from '@/constants/works';
+import WorkService from '../../back-end/services/WorkService';
 
-const works = [
-  { href: '#about', title: 'Exam 0', category: 'Front-end' },
-  { href: '#works', title: 'Exam 1', category: 'Front-end' },
-  { href: '#request', title: 'Exam 2', category: 'Front-end' },
-  { href: '#contact', title: 'Exam 3', category: 'Back-end' },
-];
+const workService = new WorkService(db);
 
-const categories = [...new Set(works.map((work) => work.category))];
+export default async function WorksSection() {
+  const dbWorks: Work[] = await workService.getAll().catch(() => []);
+  const works = dbWorks.length > 0 ? dbWorks : defaultWorks;
+  const categories = [...new Set(works.map((work) => work.Category.name))];
 
-export default function WorksSection() {
   return (
     <section id="works" className="mt-[120px] md:ml-[5%] lg:ml-[10%]">
       <h2 className="font-cormorant font-[300] text-white text-h1-mobile lg:text-h1-desktop leading-(--line-height-default)">
@@ -25,16 +26,38 @@ export default function WorksSection() {
           <h3 className="text-white font-cormorant text-h2-mobile lg:text-h2-desktop">
             {category}
           </h3>
-          <ul className="grid grid-cols-2">
+          <ul className="grid grid-cols-2 gap-[20px] mt-[20px] md:gap-[50px]">
             {works
-              .filter((work) => work.category === category)
+              .filter((work) => work.Category.name === category)
               .map((work) => (
-                <li key={work.title}>
-                  <article>
-                    <h4 className="text-white font-cormorant">{work.title}</h4>
-                    <Link href={work.href} className="text-white">
-                      {work.title}
-                    </Link>
+                <li key={work.id}>
+                  <article className="relative">
+                    <figure className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={work.thumbnail}
+                        alt={`${work.name} thumbnail`}
+                        fill
+                        sizes="(min-width: 744px) 50vw, 100vw"
+                        className="object-contain"
+                      />
+                    </figure>
+                    <h4 className="font-cormorant text-white text-h2-mobile line-clamp-2 min-h-[2lh] mt-[15px]">
+                      <Link
+                        href={`/work/${work.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="after:absolute after:inset-0"
+                      >
+                        {work.name}
+                      </Link>
+                    </h4>
+                    <p className="font-text line-clamp-2 min-h-[2lh] mt-[5px]">
+                      {work.teaser}
+                    </p>
+                    <span
+                      className="block font-cormorant text-gold-text mt-[10px]"
+                      aria-hidden="true"
+                    >
+                      Read more
+                    </span>
                   </article>
                 </li>
               ))}
