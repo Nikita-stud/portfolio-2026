@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import SideName from '@/ui/SideName';
 
 export default function BioPopup() {
   return (
     <div
       id="bio"
       popover="auto"
-      className="m-auto max-w-[1100px] max-h-full overflow-y-auto overscroll-contain bg-transparent text-white opacity-0 open:opacity-100 backdrop:bg-dark/90 [scroll-timeline:--bio_y] md:m-0 md:w-full md:h-full md:max-w-none"
+      className="m-auto max-w-[1100px] max-h-full overflow-y-auto overscroll-contain bg-transparent text-white opacity-0 open:opacity-100 starting:open:opacity-100 backdrop:bg-dark/90 [scroll-timeline:--bio_y] md:m-0 md:w-full md:h-full md:max-w-none"
     >
       <button
         type="button"
@@ -16,9 +17,15 @@ export default function BioPopup() {
         aria-hidden="true"
       ></button>
       <span
-        className="fixed top-0 inset-x-0 z-5 h-[85px] pointer-events-none bg-linear-to-b from-dark to-transparent lg:h-[100px] xl:h-[130px]"
+        className="fixed top-0 inset-x-0 z-5 h-[85px] pointer-events-none bg-linear-to-b from-dark to-transparent md:h-[70px] lg:h-[85px] xl:h-[115px]"
         aria-hidden="true"
       ></span>
+      <div
+        className="hidden md:block starting:opacity-100 **:starting:opacity-100 [&_aside]:z-10 [&_aside]:animate-none"
+        aria-hidden="true"
+      >
+        <SideName />
+      </div>
       <button
         type="button"
         popoverTarget="bio"
@@ -28,8 +35,8 @@ export default function BioPopup() {
       >
         <i className="fa-solid fa-xmark text-[30px]" aria-hidden="true"></i>
       </button>
-      <div className="flex flex-col items-center gap-[30px] p-[20px] mt-[50px] md:relative md:flex-row md:items-start md:gap-[50px] md:p-[50px] md:mt-[35px] lg:mt-[50px] xl:mt-[80px]">
-        <figure className="frame shrink-0 w-full max-w-[400px] h-[450px] p-[10px] md:sticky md:top-[85px] md:ml-[5%] md:max-w-none md:p-[20px] md:w-[300px] lg:top-[100px] lg:ml-[10%] lg:w-[350px] lg:h-[550px] xl:top-[130px] xl:w-[450px] xl:h-[600px]">
+      <div className="flex flex-col items-center gap-[30px] p-[20px] mt-[50px] md:relative md:flex-row md:items-start md:gap-[50px] md:p-[35px] md:mt-[35px] lg:mt-[50px] xl:mt-[80px]">
+        <figure className="frame shrink-0 w-full max-w-[400px] h-[450px] p-[10px] md:sticky md:top-[70px] md:ml-[5%] md:max-w-none md:p-[20px] md:w-[300px] lg:top-[85px] lg:ml-[10%] lg:w-[350px] lg:h-[550px] xl:top-[115px] xl:w-[450px] xl:h-[600px]">
           <div className="relative w-full h-full">
             <Image
               src="/me.jpeg"
@@ -66,15 +73,24 @@ export default function BioPopup() {
           ></span>
           <p className="font-cormorant lg:text-body-desktop mt-[30px] leading-[1.8]">
             Hello there traveler, I am Nikita Fedorov, a full stack engineer
-            with a degree in Front End Development from Noroff University in
-            Norway, and I have completed the first of two years in Back-End
-            Development at the same institution.
+            with a degree in Front
+            <i
+              className="fa-solid fa-minus mx-[1px] text-[10px] -rotate-10 md:mx-[3px] md:text-[10px] md:relative md:-top-[2px] lg:-top-[4px]"
+              aria-hidden="true"
+            ></i>
+            End Development from Noroff University in Norway, and I have
+            completed the first of two years in Back
+            <i
+              className="fa-solid fa-minus mx-[1px] text-[10px] -rotate-10 md:mx-[3px] md:text-[10px] md:relative md:-top-[2px] lg:-top-[4px]"
+              aria-hidden="true"
+            ></i>
+            End Development at the same institution.
           </p>
           <p className="font-cormorant lg:text-body-desktop mt-[20px] leading-[1.8]">
             Before enrolling at Noroff in October 2022, I worked as a security
-            guard at the National Museum in Oslo, Norway, where I was also
-            responsible for events and worked as a secretary and housekeeper at
-            the same time.
+            guard at the National Museum in Oslo, Norway. Working multiple jobs
+            such as being an event manager, secretary and housekeeper at the
+            same time.
           </p>
           <p className="font-cormorant lg:text-body-desktop mt-[20px] leading-[1.8]">
             I also enrolled in and received a diploma as a qualified carpenter
@@ -89,7 +105,7 @@ export default function BioPopup() {
             economics, legal issues and politics in real world business
             settings.
           </p>
-          <p className="font-cormorant italic text-gold-text lg:text-body-desktop mt-[30px] mb-[50px]">
+          <p className="font-cormorant italic text-gold-text lg:text-body-desktop mt-[30px] mb-[80px]">
             Nothing in excess. Everything with intention.
           </p>
         </article>
