@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import BioPopup from '@/ui/BioPopup';
 
 export const metadata: Metadata = {
   title: 'Welcome | Fedorov Utvikler',
@@ -12,17 +13,25 @@ export default function Home() {
     <div className="md:mt-[35px] lg:mt-[50px] xl:mt-[80px]">
       <div className="flex flex-col md:flex-row ">
         <div className="m-auto md:mr-[20px] md:ml-[5%] lg:mr-[20px] lg:ml-[10%] xl:mr-[50px]">
-          <figure className="frame w-[400px] h-[550px] p-[10px] md:p-[20px] md:w-[300px] md:h-[450px] lg:w-[350px] lg:h-[550px] xl:w-[450px] xl:h-[600px]">
-            <div className="relative w-full h-full">
-              <Image
-                src="/nike.jpg"
-                alt="Image of Nike the goddess of victory"
-                loading="eager"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </figure>
+          <button
+            type="button"
+            popoverTarget="bio"
+            className="cursor-pointer"
+            aria-label="Open bio"
+          >
+            <figure className="frame w-[400px] h-[550px] p-[10px] md:p-[20px] md:w-[300px] md:h-[450px] lg:w-[350px] lg:h-[550px] xl:w-[450px] xl:h-[600px]">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/nike.jpg"
+                  alt="Image of Nike the goddess of victory"
+                  loading="eager"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </figure>
+          </button>
+          <BioPopup />
         </div>
         <section className="delay-show mt-[20px] md:mt-[160px] md:z-10 lg:mt-[130px] xl:mt-[240px]">
           <h1>
