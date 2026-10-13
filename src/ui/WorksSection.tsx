@@ -2,11 +2,13 @@
 import Link from 'next/link';
 
 const works = [
-  { href: '#about', title: 'JS' },
-  { href: '#works', title: 'works' },
-  { href: '#request', title: 'request' },
-  { href: '#contact', title: 'contact' },
+  { href: '#about', title: 'Exam 0', category: 'Front-end' },
+  { href: '#works', title: 'Exam 1', category: 'Front-end' },
+  { href: '#request', title: 'Exam 2', category: 'Front-end' },
+  { href: '#contact', title: 'Exam 3', category: 'Back-end' },
 ];
+
+const categories = [...new Set(works.map((work) => work.category))];
 
 export default function WorksSection() {
   return (
@@ -18,14 +20,27 @@ export default function WorksSection() {
         className="block w-full h-[1px] mt-[5px] mx-auto bg-gold md:mx-0 md:w-[550px]"
         aria-hidden="true"
       ></span>
-      <div className="grid grid-cols-2">
-        {works.map((work) => (
-          <article key={work.title}>
-            <h4 className="text-white font-cormorant">{work.title}</h4>
-            <Link href={work.href}>{work.title}</Link>
-          </article>
-        ))}
-      </div>
+      {categories.map((category) => (
+        <div key={category} className="mt-[20px]">
+          <h3 className="text-white font-cormorant text-h2-mobile lg:text-h2-desktop">
+            {category}
+          </h3>
+          <ul className="grid grid-cols-2">
+            {works
+              .filter((work) => work.category === category)
+              .map((work) => (
+                <li key={work.title}>
+                  <article>
+                    <h4 className="text-white font-cormorant">{work.title}</h4>
+                    <Link href={work.href} className="text-white">
+                      {work.title}
+                    </Link>
+                  </article>
+                </li>
+              ))}
+          </ul>
+        </div>
+      ))}
     </section>
   );
 }
