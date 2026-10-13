@@ -43,6 +43,7 @@ export default function BioPopup() {
               alt="Portrait of Nikita Fedorov"
               loading="lazy"
               fill
+              sizes="(min-width: 1280px) 450px, (min-width: 1024px) 350px, (min-width: 744px) 300px, 400px"
               className="object-cover"
             />
             <Image
@@ -50,6 +51,7 @@ export default function BioPopup() {
               alt="Portrait of Nikita Fedorov"
               loading="lazy"
               fill
+              sizes="(min-width: 1280px) 450px, (min-width: 1024px) 350px, (min-width: 744px) 300px, 400px"
               className="object-cover scroll-swap"
             />
           </div>

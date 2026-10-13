@@ -4,10 +4,10 @@ import { usePathname } from 'next/navigation';
 import SideName from '@/ui/SideName';
 
 const navLinks = [
-  { href: '/', label: 'about' },
-  { href: '/works', label: 'works' },
-  { href: '/request', label: 'request' },
-  { href: '/contact', label: 'contact' },
+  { href: '#about', label: 'about' },
+  { href: '#works', label: 'works' },
+  { href: '#request', label: 'request' },
+  { href: '#contact', label: 'contact' },
 ];
 
 export default function Header() {
