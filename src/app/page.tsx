@@ -23,7 +23,7 @@ export default function Home() {
               className="cursor-pointer"
               aria-label="Open bio"
             >
-              <figure className="frame w-[400px] h-[550px] p-[10px] md:p-[20px] md:w-[300px] md:h-[450px] lg:w-[350px] lg:h-[550px] xl:w-[450px] xl:h-[600px]">
+              <figure className="frame frame-spin w-[400px] h-[550px] p-[10px] md:p-[20px] md:w-[300px] md:h-[450px] lg:w-[350px] lg:h-[550px] xl:w-[450px] xl:h-[600px]">
                 <div className="relative w-full h-full">
                   <Image
                     src="/nike.jpg"
@@ -60,8 +60,26 @@ export default function Home() {
           </section>
         </div>
       </div>
-      <WorksSection />
+
       <RequestSection />
+      <figure className="relative h-[500px] mt-[100px] -mx-[20px] sm:-mx-[35px] md:-mx-[50px] md:h-[700px] xl:h-[900px]">
+        <Image
+          src="/main.jpg"
+          alt="Marble wrestlers statue in a dark gallery of gilded paintings"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <span
+          className="absolute inset-x-0 top-0 h-[30%] bg-linear-to-b from-dark to-transparent"
+          aria-hidden="true"
+        ></span>
+        <span
+          className="absolute inset-x-0 bottom-0 h-[30%] bg-linear-to-t from-dark to-transparent"
+          aria-hidden="true"
+        ></span>
+      </figure>
+      <WorksSection />
       <ContactSection />
     </>
   );

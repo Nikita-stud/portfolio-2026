@@ -1,8 +1,10 @@
+import Link from 'next/link';
+
 export default function SideName() {
   return (
     <aside className="delay-show md:flex md:fixed md:top-[90px] md:left-0 md:h-[398px] lg:h-[577px] md:items-end md:px-[20px] lg:px-[35px] lg:top-[25px] xl:top-[110px]">
       <p className="font-cormorant text-body-mobile md:text-h2-mobile lg:text-h2-desktop font-[300] tracking-[2px] md:tracking-[5px] lg:tracking-[10px] md:[writing-mode:vertical-rl] md:rotate-180">
-        NIKITA FEDOROV
+        <Link href="/">NIKITA FEDOROV</Link>
       </p>
     </aside>
   );

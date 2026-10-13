@@ -5,23 +5,23 @@ export default function ContactSection() {
         CONTACT
       </h2>
       <span
-        className="block w-full h-[1px] mt-[5px] mx-auto bg-gold md:mx-0 xl:w-[650px]"
+        className="block w-full h-[1px] mt-[5px] mx-auto bg-gold md:mx-0 md:w-[470px] xl:w-[700px]"
         aria-hidden="true"
       ></span>
       <div className="relative z-20">
-        <div className="w-full max-w-full md:w-[750px] xl:w-full">
-          <p className="font-cormorant lg:text-body-desktop mt-[20px] leading-[1.8]">
+        <div className="w-full md:w-[min(750px,100%)] xl:w-full">
+          <p className="font-text xl:text-body-desktop mt-[20px] leading-[1.8]">
             Feel free to send an email or call anytime for a chit chat.
           </p>
-          <p className="font-cormorant lg:text-body-desktop leading-[1.8]">
+          <p className="font-text xl:text-body-desktop leading-[1.8]">
             If you have an idea but don&apos;t know where to start, we will
             figure it out together.
           </p>
-          <p className="font-cormorant lg:text-body-desktop leading-[1.8]">
+          <p className="font-text xl:text-body-desktop leading-[1.8]">
             The most important step is to take that first step!
           </p>
         </div>
-        <div className="flex items-center justify-between my-[20px]">
+        <div className="flex items-center justify-between my-[20px] mt-[30px]">
           <a
             href="mailto:kontakt@fedutvikler.com"
             className="block w-fit font-cormorant text-gold-text text-h2-mobile lg:text-h2-desktop"

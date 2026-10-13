@@ -14,7 +14,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="pt-[40px] sm:px-[35px] md:pl-[0px] md:pt-[90px] md:pr-[50px] md:bg-dark md:z-10 lg:pt-[35px] xl:pt-[10px]">
+    <header className="pt-[40px] sm:px-[35px] md:pl-[0px] md:pt-[90px] md:pr-[50px] md:z-10 lg:pt-[35px] xl:pt-[10px]">
       <div className="flex flex-wrap items-baseline gap-x-[20px] gap-y-[10px] md:block">
         <SideName />
         <span

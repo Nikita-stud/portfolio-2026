@@ -4,7 +4,7 @@
   --color-gold: #e9b752;
   --color-gold-darker: #78582a;
   --color-gold-text: #c79543;
-  --color-dark: #020618;
+  --color-dark: #0c0201;
   --color-white: #f3fffb;
   --color-grey: #b1afae;
 
@@ -22,7 +22,7 @@
 
   --font-cormorant: var(--font-cormorant);
   --font-headers: var(--font-cormorant);
-  --font-text: var(--font-cormorant);
+  --font-text: system-ui, -apple-system, sans-serif;
 }
 @utility delay-show {
   animation: show 0.5s ease 0.5s both;
@@ -93,6 +93,23 @@
       0 0 0 1px color-mix(in srgb, var(--color-white) 15%, transparent);
   }
 }
+@property --frame-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 235deg;
+}
+@utility frame-spin {
+  /* turns the .frame gold clockwise while hovered, stops where it is on leave */
+  animation: frame-spin 4s linear infinite paused;
+  &:hover {
+    animation-play-state: running;
+  }
+}
+@keyframes frame-spin {
+  to {
+    --frame-angle: 595deg;
+  }
+}
 @layer base {
   * {
     transition:
@@ -128,6 +145,7 @@
   }
   p {
     font-size: var(--text-body-mobile);
+    font-family: var(--font-text);
     color: var(--color-white);
   }
 
@@ -151,7 +169,7 @@
   .frame {
     border: 5px solid transparent;
     border-image: linear-gradient(
-        to bottom left,
+        var(--frame-angle),
         var(--color-gold-darker) 0%,
         var(--color-gold) 50%,
         var(--color-gold-darker) 100%
@@ -184,7 +202,7 @@
     .frame {
       border: 10px solid transparent;
       border-image: linear-gradient(
-          to bottom left,
+          var(--frame-angle),
           var(--color-gold-darker) 0%,
           var(--color-gold) 50%,
           var(--color-gold-darker) 100%

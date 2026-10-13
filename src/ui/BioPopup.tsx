@@ -22,7 +22,7 @@ export default function BioPopup() {
       ></span>
       <div
         className="hidden md:block starting:opacity-100 **:starting:opacity-100 [&_aside]:z-10 [&_aside]:animate-none"
-        aria-hidden="true"
+        inert
       >
         <SideName />
       </div>
@@ -60,7 +60,7 @@ export default function BioPopup() {
           <div className="font-cormorant text-gold-text text-h2-mobile flex items-center justify-center gap-2 md:justify-start">
             <span aria-hidden="true">Νικίτα Φεντόροφ</span>
             <i className="fa-solid fa-circle text-[5px]" aria-hidden="true"></i>
-            <p className="text-h2-mobile">Nikita Fedorov</p>
+            <p className="font-cormorant text-h2-mobile">Nikita Fedorov</p>
           </div>
           <span
             className="block w-[280px] h-[1px] mt-[20px] mx-auto bg-gold md:mx-0"
@@ -73,7 +73,7 @@ export default function BioPopup() {
             className="block w-[280px] h-[1px] mt-[20px] mx-auto bg-gold md:mx-0"
             aria-hidden="true"
           ></span>
-          <p className="font-cormorant lg:text-body-desktop mt-[30px] leading-[1.8]">
+          <p className="lg:text-body-desktop mt-[30px] leading-[1.8]">
             Hello there traveler, I am Nikita Fedorov, a full stack engineer
             with a degree in Front
             <i
@@ -88,19 +88,19 @@ export default function BioPopup() {
             ></i>
             End Development at the same institution.
           </p>
-          <p className="font-cormorant lg:text-body-desktop mt-[20px] leading-[1.8]">
+          <p className=" lg:text-body-desktop mt-[20px] leading-[1.8]">
             Before enrolling at Noroff in October 2022, I worked as a security
             guard at the National Museum in Oslo, Norway. Working multiple jobs
             such as being an event manager, secretary and housekeeper at the
             same time.
           </p>
-          <p className="font-cormorant lg:text-body-desktop mt-[20px] leading-[1.8]">
+          <p className=" lg:text-body-desktop mt-[20px] leading-[1.8]">
             I also enrolled in and received a diploma as a qualified carpenter
             back in 2019. This course was fundamental in enhancing various
             skills such as mathematics, mechanical drawing and attention to
             detail.
           </p>
-          <p className="font-cormorant lg:text-body-desktop mt-[20px] leading-[1.8]">
+          <p className=" lg:text-body-desktop mt-[20px] leading-[1.8]">
             After receiving the diploma, I moved to Germany in 2019 to study
             international business administration at the University of
             Hochschule Worms, where I studied and applied knowledge of
