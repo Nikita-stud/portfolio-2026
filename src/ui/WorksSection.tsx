@@ -22,26 +22,38 @@ export default async function WorksSection() {
         aria-hidden="true"
       ></span>
       {categories.map((category) => (
-        <div key={category} className="mt-[20px]">
-          <h3 className="text-white font-cormorant text-h2-mobile lg:text-h2-desktop">
+        <div key={category} className="mt-[20px] md:mr-[100px] lg:mr-[140px]">
+          <h3
+            className={`text-white font-cormorant text-h2-mobile lg:text-h2-desktop ${
+              category === 'Back-end' ? 'text-right' : ''
+            }`}
+          >
             {category}
           </h3>
-          <ul className="grid grid-cols-2 gap-[20px] mt-[20px] md:gap-[50px]">
+          <ul
+            className={`grid grid-cols-2 gap-[20px] mt-[20px] md:gap-[50px] ${
+              category === 'Back-end' ? '[direction:rtl] *:[direction:ltr]' : ''
+            }`}
+          >
             {works
               .filter((work) => work.Category.name === category)
               .map((work) => (
-                <li key={work.id}>
-                  <article className="relative">
-                    <figure className="relative aspect-[16/10] overflow-hidden">
+                <li key={work.id} className="flex flex-col">
+                  <article className="relative flex-1 flex flex-col p-[10px] -m-[10px] border border-transparent transition-colors duration-500 hover:border-gold">
+                    <figure className="relative aspect-video overflow-hidden">
                       <Image
                         src={work.thumbnail}
                         alt={`${work.name} thumbnail`}
                         fill
                         sizes="(min-width: 744px) 50vw, 100vw"
-                        className="object-contain"
+                        className="object-cover"
                       />
                     </figure>
-                    <h4 className="font-cormorant text-white text-h2-mobile line-clamp-2 min-h-[2lh] mt-[15px]">
+                    <h4
+                      className={`font-cormorant text-white text-h2-mobile line-clamp-2 mt-[15px] ${
+                        category === 'Back-end' ? 'text-right' : ''
+                      }`}
+                    >
                       <Link
                         href={`/work/${work.name.toLowerCase().replace(/\s+/g, '-')}`}
                         className="after:absolute after:inset-0"
@@ -49,11 +61,11 @@ export default async function WorksSection() {
                         {work.name}
                       </Link>
                     </h4>
-                    <p className="font-text line-clamp-2 min-h-[2lh] mt-[5px]">
+                    <p className="font-text line-clamp-2 mt-[10px]">
                       {work.teaser}
                     </p>
                     <span
-                      className="block font-cormorant text-gold-text mt-[10px]"
+                      className="block font-cormorant text-gold-text mt-auto pt-[10px]"
                       aria-hidden="true"
                     >
                       Read more
