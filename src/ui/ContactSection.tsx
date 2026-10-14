@@ -42,7 +42,7 @@ export default function ContactSection() {
             }`}
           >
             <div
-              className="frame p-[5px] md:p-[10px]"
+              className="frame max-md:border-0 md:p-[10px]"
               aria-hidden="true"
             >
               <div className="relative aspect-square overflow-hidden">
@@ -57,9 +57,18 @@ export default function ContactSection() {
               </div>
             </div>
             <div className="relative flex items-center justify-center h-[64px]">
-              <span className="absolute left-0 right-1/2 h-[2px] bg-grey/30 transition-colors duration-500 group-hover:bg-gold in-[li:has(~li:hover)]:bg-gold group-first:hidden"></span>
-              <span className="absolute left-1/2 right-0 h-[2px] bg-grey/30 transition-colors duration-500 in-[li:has(~li:hover)]:bg-gold group-last:hidden"></span>
-              <span className="relative px-[5px] py-[5px] bg-dark border border-gold-darker font-text text-xs text-white transition-colors duration-500 group-hover:text-gold-text md:px-[10px] md:text-xs-mobile">
+              <span className="absolute left-0 right-1/2 h-[2px] bg-grey/30 group-first:hidden"></span>
+              <span className="absolute left-1/2 right-0 h-[2px] bg-grey/30 group-last:hidden"></span>
+              <span
+                className="absolute right-1/2 h-[2px] bg-gold origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"
+                style={{ width: `${index * 100}%` }}
+              ></span>
+              <span
+                className={` absolute left-1/2 w-[2px] -translate-x-1/2 bg-grey/30 transition-colors duration-500 group-hover:bg-gold ${
+                  index % 2 === 1 ? 'top-1/2 bottom-0' : 'top-0 bottom-1/2'
+                }`}
+              ></span>
+              <span className="relative z-10 px-[5px] py-[5px] bg-dark border border-gold-darker font-text text-xs text-white transition-colors duration-500 group-hover:text-gold-text md:px-[10px] md:text-xs-mobile">
                 {step.label}
               </span>
             </div>
@@ -88,7 +97,7 @@ export default function ContactSection() {
             <i className="fa-solid fa-envelope text-gold-text text-body-mobile"></i>{' '}
             kontakt@fedutvikler.com
           </a>
-          <div className="flex gap-[20px] text-white text-[30px]">
+          <div className="mt-[20px] flex gap-[20px] text-white text-[30px] sm:mt-[0px]">
             <a
               href="https://github.com/Nikita-stud"
               target="_blank"
