@@ -69,7 +69,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable}`}>
+    <html
+      lang="en"
+      className={`${cormorant.variable} scroll-smooth motion-reduce:scroll-auto`}
+    >
       <body>
         <Script
           src="https://kit.fontawesome.com/54f19440a6.js"

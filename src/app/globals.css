@@ -122,6 +122,30 @@
   }
 }
 
+/* ----- BACK TO TOP -----*/
+@utility scroll-show {
+  @supports (animation-timeline: scroll()) {
+    opacity: 0;
+    visibility: hidden;
+    animation-name: scroll-show;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: scroll(root);
+  }
+}
+@keyframes scroll-show {
+  0%,
+  20% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  25%,
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 /* ----- HERO FRAME -----*/
 @property --frame-angle {
   syntax: '<angle>';

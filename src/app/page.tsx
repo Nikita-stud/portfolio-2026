@@ -67,6 +67,15 @@ export default function Home() {
           __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
         }}
       />
+      <div className="sticky top-[10px] z-30 flex justify-end h-0 transition-none md:hidden">
+        <a
+          href="#"
+          aria-label="Back to top"
+          className="scroll-show flex items-center justify-center w-[50px] h-[50px] rounded-full bg-dark text-white shadow-[0_0_20px_rgb(0_0_0/0.8)]"
+        >
+          <i className="fa-solid fa-arrow-up text-[20px]" aria-hidden="true"></i>
+        </a>
+      </div>
       <div id="about" className="md:mt-[35px] lg:mt-[50px] xl:mt-[80px]">
         <div className="flex flex-col md:flex-row ">
           <div className="m-auto md:mr-[20px] md:ml-[5%] lg:mr-[20px] lg:ml-[10%] xl:mr-[50px]">
@@ -91,7 +100,7 @@ export default function Home() {
             </button>
             <BioPopup />
           </div>
-          <section className="delay-show mt-[20px] md:mt-[160px] md:z-10 lg:mt-[130px] xl:mt-[240px]">
+          <section className="delay-show mt-[50px] md:mt-[160px] md:z-10 lg:mt-[130px] xl:mt-[240px]">
             <h1>
               AS A <br />
               <span className="text-gold-text">

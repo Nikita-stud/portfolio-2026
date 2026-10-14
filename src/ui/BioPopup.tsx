@@ -36,7 +36,7 @@ export default function BioPopup() {
         <i className="fa-solid fa-xmark text-[30px]" aria-hidden="true"></i>
       </button>
       <div className="flex flex-col items-center gap-[30px] p-[20px] mt-[50px] md:relative md:flex-row md:items-start md:gap-[50px] md:p-[35px] md:mt-[35px] lg:mt-[50px] xl:mt-[80px]">
-        <figure className="frame shrink-0 w-full max-w-[400px] h-[450px] p-[10px] md:sticky md:top-[70px] md:ml-[5%] md:max-w-none md:p-[20px] md:w-[300px] lg:top-[85px] lg:ml-[10%] lg:w-[350px] lg:h-[550px] xl:top-[115px] xl:w-[450px] xl:h-[600px]">
+        <figure className="frame starting:opacity-100 shrink-0 w-full max-w-[400px] h-[450px] p-[10px] md:sticky md:top-[70px] md:ml-[5%] md:max-w-none md:p-[20px] md:w-[300px] lg:top-[85px] lg:ml-[10%] lg:w-[350px] lg:h-[550px] xl:top-[115px] xl:w-[450px] xl:h-[600px]">
           <div className="relative w-full h-full">
             <Image
               src="/me.jpeg"

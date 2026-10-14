@@ -46,11 +46,11 @@ export default async function WorksSection() {
                   {work.name}
                 </Link>
               </h3>
-              <p className="font-text text-xs-mobile line-clamp-2 mt-[10px] md:text-body-mobile">
+              <p className="font-text text-xs-mobile line-clamp-2 mt-auto pt-[10px] md:text-body-mobile">
                 {work.teaser}
               </p>
               <span
-                className="block font-text text-xs-mobile text-gold-darker mt-auto pt-[10px] transition-colors duration-500 group-hover:text-gold-text"
+                className="block font-text text-xs-mobile text-gold-darker pt-[10px] transition-colors duration-500 group-hover:text-gold-text"
                 aria-hidden="true"
               >
                 Read more{' '}

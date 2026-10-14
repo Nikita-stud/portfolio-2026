@@ -4,7 +4,7 @@ export default function StackSection() {
   return (
     <section
       id="stack"
-      className="mt-[50px] md:mt-[120px] md:ml-[5%] lg:ml-[10%]"
+      className="mt-[50px] md:mt-[80px] lg:mt-[100px] xl:mt-[120px] md:ml-[5%] lg:ml-[10%]"
     >
       {stack.map((row) => (
         <div
