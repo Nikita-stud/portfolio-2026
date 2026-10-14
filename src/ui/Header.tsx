@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import SideName from '@/ui/SideName';
 
 const navLinks = [
@@ -11,7 +11,25 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(`#${entry.target.id}`);
+        });
+      },
+      { rootMargin: '-50% 0px -50% 0px' },
+    );
+
+    navLinks.forEach((link) => {
+      const section = document.querySelector(link.href);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="pt-[40px] sm:px-[35px] md:pl-[0px] md:pt-[90px] md:pr-[50px] md:z-10 lg:pt-[35px] xl:pt-[10px]">
@@ -28,7 +46,7 @@ export default function Header() {
                 <Link
                   href={link.href}
                   className={
-                    pathname === link.href
+                    activeSection === link.href
                       ? 'font-bold text-gold-text'
                       : 'font-normal '
                   }
