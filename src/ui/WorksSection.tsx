@@ -3,6 +3,7 @@ import Image from 'next/image';
 // import db from '../../back-end/models';
 // import type { Work } from '@/types';
 import { defaultWorks } from '@/constants/works';
+import { toSlug } from '@/helpers/slug';
 // import WorkService from '../../back-end/services/WorkService';
 
 // const workService = new WorkService(db);
@@ -39,7 +40,7 @@ export default async function WorksSection() {
               </figure>
               <h3 className="font-cormorant text-white text-h2-mobile line-clamp-2 mt-[15px]">
                 <Link
-                  href={`/work/${work.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/work/${toSlug(work.name)}`}
                   className="after:absolute after:inset-0"
                 >
                   {work.name}

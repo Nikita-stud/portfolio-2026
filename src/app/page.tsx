@@ -5,16 +5,68 @@ import WorksSection from '@/ui/WorksSection';
 import RequestSection from '@/ui/RequestSection';
 import ContactSection from '@/ui/ContactSection';
 import StackSection from '@/ui/StackSection';
+import { siteUrl, siteName, siteTitle, brand } from '@/constants/site';
 
 export const metadata: Metadata = {
-  title: 'Welcome | Fedorov Utvikler',
-  description:
-    'Cool that you decided to check out a developers website, here to impress you!',
+  title: { absolute: siteTitle },
+  alternates: { canonical: '/' },
+};
+
+const address = {
+  '@type': 'PostalAddress',
+  addressLocality: 'Oslo',
+  addressCountry: 'NO',
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
+      name: siteName,
+      url: siteUrl,
+      jobTitle: 'Full-Stack Developer',
+      email: 'mailto:kontakt@fedutvikler.com',
+      image: `${siteUrl}/me.jpeg`,
+      address,
+      sameAs: [
+        'https://github.com/Nikita-stud',
+        'https://www.behance.net/fedutvikler',
+      ],
+      knowsAbout: [
+        'TypeScript',
+        'React',
+        'Next.js',
+        'Node.js',
+        'Express',
+        'MySQL',
+        'Tailwind CSS',
+      ],
+      worksFor: { '@id': `${siteUrl}/#organization` },
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: brand,
+      url: siteUrl,
+      logo: `${siteUrl}/android-chrome-512x512.png`,
+      email: 'mailto:kontakt@fedutvikler.com',
+      address,
+      founder: { '@id': `${siteUrl}/#person` },
+    },
+  ],
 };
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+        }}
+      />
       <div id="about" className="md:mt-[35px] lg:mt-[50px] xl:mt-[80px]">
         <div className="flex flex-col md:flex-row ">
           <div className="m-auto md:mr-[20px] md:ml-[5%] lg:mr-[20px] lg:ml-[10%] xl:mr-[50px]">

@@ -5,9 +5,9 @@ export const defaultWorks: Work[] = [
     id: 4,
     name: 'Exam Project 2',
     teaser:
-      'Semester project: an auction site where users sign up, list items and bid with credits, plus search and user profiles.',
+      'Holidaze, a Next.js and TypeScript venue booking site where guests and venue managers register, browse venues and book stays.',
     description:
-      'Semester project: an auction site where users sign up, list items and bid with credits, plus search and user profiles. Semester project: an auction site where users sign up, list items and bid with credits, plus search and user profiles.Semester project: an auction site where users sign up, list items and bid with credits, plus search and user profiles.',
+      'Holidaze was my final exam, focused on React within Next.js. The task was to build a working venue booking website using modern solutions and the knowledge gained throughout the courses. It is built with Next.js and TypeScript, uses Zustand for state, React Hook Form and Zod for form validation, Tailwind CSS for styling and the Noroff Holidaze API for data. Visitors can register as a user or a venue manager, browse a paginated list of venues with ten venues per page, and open a details page for each venue with a date picker that shows its availability. Both users and venue managers can book stays and see their upcoming bookings.',
     thumbnail: '/ep2.jpg',
     github: 'https://github.com/Nikita-stud/Project-Exam2',
     live_url: 'https://holidaze-home.netlify.app/',

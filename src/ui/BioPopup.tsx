@@ -75,17 +75,19 @@ export default function BioPopup() {
           ></span>
           <p className="mt-[30px] leading-[1.8]">
             Hello there traveler, I am Nikita Fedorov, a full stack engineer
-            with a degree in Front
+            with a vocational degree in Front
             <i
               className="fa-solid fa-minus mx-[1px] text-[10px] -rotate-10 md:mx-[3px] md:text-[10px] md:relative md:-top-[2px] lg:-top-[4px]"
               aria-hidden="true"
             ></i>
+            <span className="sr-only">-</span>
             End Development from Noroff University in Norway, and I have
             completed the first of two years in Back
             <i
               className="fa-solid fa-minus mx-[1px] text-[10px] -rotate-10 md:mx-[3px] md:text-[10px] md:relative md:-top-[2px] lg:-top-[4px]"
               aria-hidden="true"
             ></i>
+            <span className="sr-only">-</span>
             End Development at the same institution.
           </p>
           <p className="mt-[20px] leading-[1.8]">
