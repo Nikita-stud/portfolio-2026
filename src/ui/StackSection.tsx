@@ -2,14 +2,10 @@ import { stack } from '@/constants/stack';
 
 export default function StackSection() {
   return (
-    <section id="stack" className="mt-[120px] md:ml-[5%] lg:ml-[10%]">
-      <h2 className="font-cormorant  text-white text-h1-mobile lg:text-h1-desktop ">
-        Stack
-      </h2>
-      <span
-        className="block   w-[80px] h-[1px] mt-[5px] mb-[30px] bg-gold md:mb-[40px] md:mx-0 md:w-[80px] lg:w-[125px]"
-        aria-hidden="true"
-      ></span>
+    <section
+      id="stack"
+      className="mt-[50px] md:mt-[120px] md:ml-[5%] lg:ml-[10%]"
+    >
       {stack.map((row) => (
         <div
           key={row.label}
