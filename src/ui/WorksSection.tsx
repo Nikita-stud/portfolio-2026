@@ -38,7 +38,7 @@ export default async function WorksSection() {
                   {work.Category.name}
                 </span>
               </figure>
-              <h3 className="font-cormorant text-white text-h2-mobile line-clamp-2 mt-[15px]">
+              <h3 className="font-cormorant text-white text-body-mobile line-clamp-2 mt-[15px] md:text-h2-mobile">
                 <Link
                   href={`/work/${toSlug(work.name)}`}
                   className="after:absolute after:inset-0"
@@ -46,7 +46,9 @@ export default async function WorksSection() {
                   {work.name}
                 </Link>
               </h3>
-              <p className="font-text line-clamp-2 mt-[10px]">{work.teaser}</p>
+              <p className="font-text text-xs-mobile line-clamp-2 mt-[10px] md:text-body-mobile">
+                {work.teaser}
+              </p>
               <span
                 className="block font-text text-xs-mobile text-gold-darker mt-auto pt-[10px] transition-colors duration-500 group-hover:text-gold-text"
                 aria-hidden="true"
