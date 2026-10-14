@@ -58,7 +58,7 @@ export const defaultWorks: Work[] = [
     Category: { id: 1, name: 'Front-end' },
   },
   {
-    id: 1,
+    id: 6,
     name: 'Interaction Design',
     teaser:
       'My first website, a jacket store in HTML and CSS, later upgraded with JavaScript, loading states and error handling.',

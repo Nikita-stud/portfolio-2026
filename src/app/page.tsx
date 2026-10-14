@@ -4,6 +4,7 @@ import BioPopup from '@/ui/BioPopup';
 import WorksSection from '@/ui/WorksSection';
 import RequestSection from '@/ui/RequestSection';
 import ContactSection from '@/ui/ContactSection';
+import StackSection from '@/ui/StackSection';
 
 export const metadata: Metadata = {
   title: 'Welcome | Fedorov Utvikler',
@@ -60,6 +61,7 @@ export default function Home() {
           </section>
         </div>
       </div>
+      <StackSection />
 
       <RequestSection />
       <figure className="relative h-[500px] mt-[100px] -mx-[20px] sm:-mx-[35px] md:-mx-[50px] md:h-[700px] xl:h-[900px]">

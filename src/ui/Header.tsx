@@ -5,8 +5,8 @@ import SideName from '@/ui/SideName';
 
 const navLinks = [
   { href: '#about', label: 'about' },
-  { href: '#works', label: 'works' },
   { href: '#request', label: 'request' },
+  { href: '#works', label: 'works' },
   { href: '#contact', label: 'contact' },
 ];
 

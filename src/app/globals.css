@@ -75,6 +75,30 @@
     opacity: 1;
   }
 }
+@utility marquee-left {
+  /* list is shown twice, moving it by half loops it seamlessly */
+  animation: marquee 40s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+@utility marquee-right {
+  animation: marquee 40s linear infinite reverse;
+  &:hover {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+@keyframes marquee {
+  to {
+    translate: -50% 0;
+  }
+}
 @utility scroll-close {
   /* white icon in a shadowed circle once the bio popup (--bio) is scrolled */
   @supports (animation-timeline: scroll()) {

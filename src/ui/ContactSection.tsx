@@ -26,7 +26,7 @@ export default function ContactSection() {
         CONTACT
       </h2>
       <span
-        className="block w-full h-[1px] mt-[5px] mx-auto bg-gold md:mb-[40px] md:mx-0 md:w-[165px] lg:w-[260px]"
+        className="block w-[170px] h-[1px] mt-[5px] bg-gold md:mb-[40px] md:mx-0 md:w-[165px] lg:w-[260px]"
         aria-hidden="true"
       ></span>
 
@@ -69,14 +69,14 @@ export default function ContactSection() {
       </ol>
       <div className="relative z-20 mt-[40px]">
         <div className="w-full md:w-[min(750px,100%)] xl:w-full">
-          <p className="font-text xl:text-body-desktop mt-[20px] leading-[1.8]">
+          <p className=" xl:text-body-desktop mt-[20px] leading-[1.8]">
             Feel free to send an email or call anytime for a chit chat.
           </p>
-          <p className="font-text xl:text-body-desktop leading-[1.8]">
+          <p className="xl:text-body-desktop leading-[1.8]">
             If you have an idea but don&apos;t know where to start, we will
             figure it out together.
           </p>
-          <p className="font-text xl:text-body-desktop leading-[1.8]">
+          <p className="xl:text-body-desktop leading-[1.8]">
             The most important step is to take that first step!
           </p>
         </div>
