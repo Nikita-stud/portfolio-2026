@@ -42,10 +42,10 @@ export default function ContactSection() {
             }`}
           >
             <div
-              className="frame aspect-square p-[5px] md:p-[10px]"
+              className="frame p-[5px] md:p-[10px]"
               aria-hidden="true"
             >
-              <div className="relative w-full h-full overflow-hidden">
+              <div className="relative aspect-square overflow-hidden">
                 <Image
                   src={step.image}
                   alt=""

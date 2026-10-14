@@ -25,6 +25,8 @@
   --font-headers: var(--font-cormorant);
   --font-text: system-ui, -apple-system, sans-serif;
 }
+
+/* ----- FADE IN -----*/
 @utility delay-show {
   animation: show 0.5s ease 0.5s both;
   @variant md {
@@ -57,6 +59,8 @@
     opacity: 0;
   }
 }
+
+/* ----- BIO POPUP -----*/
 @utility scroll-swap {
   opacity: 0;
   @supports (animation-timeline: scroll()) {
@@ -64,19 +68,17 @@
     animation-timing-function: linear;
     animation-fill-mode: both;
     animation-timeline: scroll();
-    animation-range: 0 50px;
-    @variant md {
-      animation-range: 0 250px;
-    }
   }
 }
 @keyframes swap {
-  to {
+  15%,
+  100% {
     opacity: 1;
   }
 }
+
+/* ----- STACK -----*/
 @utility marquee-left {
-  /* list is shown twice, moving it by half loops it seamlessly */
   animation: marquee 40s linear infinite;
   &:hover {
     animation-play-state: paused;
@@ -99,8 +101,9 @@
     translate: -50% 0;
   }
 }
+
+/* ----- BIO CLOSE BUTTON -----*/
 @utility scroll-close {
-  /* white icon in a shadowed circle once the bio popup (--bio) is scrolled */
   @supports (animation-timeline: scroll()) {
     animation-name: close-circle;
     animation-timing-function: linear;
@@ -118,13 +121,14 @@
       0 0 0 1px color-mix(in srgb, var(--color-white) 15%, transparent);
   }
 }
+
+/* ----- HERO FRAME -----*/
 @property --frame-angle {
   syntax: '<angle>';
   inherits: false;
   initial-value: 235deg;
 }
 @utility frame-spin {
-  /* turns the .frame gold clockwise while hovered, stops where it is on leave */
   animation: frame-spin 4s linear infinite paused;
   &:hover {
     animation-play-state: running;
@@ -135,6 +139,7 @@
     --frame-angle: 595deg;
   }
 }
+
 @layer base {
   * {
     transition:
@@ -162,6 +167,8 @@
     background: var(--color-dark);
     line-height: var(--line-height-default);
   }
+
+  /* ----- TEXT -----*/
   h1 {
     font-weight: 300;
     font-size: var(--text-h1-mobile);
