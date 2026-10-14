@@ -59,7 +59,7 @@ export default function ContactSection() {
             <div className="relative flex items-center justify-center h-[64px]">
               <span className="absolute left-0 right-1/2 h-[2px] bg-grey/30 transition-colors duration-500 group-hover:bg-gold in-[li:has(~li:hover)]:bg-gold group-first:hidden"></span>
               <span className="absolute left-1/2 right-0 h-[2px] bg-grey/30 transition-colors duration-500 in-[li:has(~li:hover)]:bg-gold group-last:hidden"></span>
-              <span className="relative px-[5px] py-[5px] bg-dark border border-gold-darker font-text text-xs-mobile text-white transition-colors duration-500 group-hover:text-gold-text md:px-[10px]">
+              <span className="relative px-[5px] py-[5px] bg-dark border border-gold-darker font-text text-xs text-white transition-colors duration-500 group-hover:text-gold-text md:px-[10px] md:text-xs-mobile">
                 {step.label}
               </span>
             </div>
@@ -80,7 +80,7 @@ export default function ContactSection() {
             The most important step is to take that first step!
           </p>
         </div>
-        <div className="flex items-center justify-between my-[20px] mt-[30px]">
+        <div className="flex flex-wrap items-center justify-between gap-x-[20px] gap-y-[10px] my-[20px] mt-[30px]">
           <a
             href="mailto:kontakt@fedutvikler.com"
             className="block w-fit font-cormorant text-gold-text text-h2-mobile lg:text-h2-desktop"

@@ -76,7 +76,7 @@ export default function Home() {
               className="cursor-pointer"
               aria-label="Open bio"
             >
-              <figure className="frame frame-spin w-[400px] h-[550px] p-[10px] md:p-[20px] md:w-[300px] md:h-[450px] lg:w-[350px] lg:h-[550px] xl:w-[450px] xl:h-[600px]">
+              <figure className="frame frame-spin w-[min(400px,calc(100vw-40px))] aspect-[8/11] p-[10px] md:p-[20px] md:w-[300px] md:h-[450px] lg:w-[350px] lg:h-[550px] xl:w-[450px] xl:h-[600px]">
                 <div className="relative w-full h-full">
                   <Image
                     src="/nike.jpg"
