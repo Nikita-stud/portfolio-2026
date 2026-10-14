@@ -11,7 +11,7 @@ const connection = {
   password: process.env.ADMIN_PASSWORD,
   port: process.env.DB_PORT,
   host: process.env.HOST,
-  dialect: process.env.DIALECT,
+  dialect: 'mysql',
   dialectModule: mysql2,
 };
 

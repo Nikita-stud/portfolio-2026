@@ -1,15 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import db from '../../back-end/models';
-import type { Work } from '@/types';
+// import db from '../../back-end/models';
+// import type { Work } from '@/types';
 import { defaultWorks } from '@/constants/works';
-import WorkService from '../../back-end/services/WorkService';
+// import WorkService from '../../back-end/services/WorkService';
 
-const workService = new WorkService(db);
+// const workService = new WorkService(db);
 
 export default async function WorksSection() {
-  const dbWorks: Work[] = await workService.getAll().catch(() => []);
-  const works = dbWorks.length > 0 ? dbWorks : defaultWorks;
+  // const dbWorks: Work[] = await workService.getAll().catch(() => []);
+  // const works = dbWorks.length > 0 ? dbWorks : defaultWorks;
+  const works = defaultWorks;
 
   return (
     <section id="works" className="mt-[120px] md:ml-[5%] lg:ml-[10%]">

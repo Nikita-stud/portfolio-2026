@@ -1,38 +1,98 @@
-# portfolio-2026
+# Portfolio
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is my personal portfolio, built with Next.js and React and backed by a small MySQL database. It presents who I am, the stack I work with, how a project request goes from idea to launch, and a selection of my works, each with its own details page.
+
+Explore the website by visiting the link - [Fedorov Utvikler](ADD_LIVE_LINK_HERE)
+
+## Key Features
+
+- Built on Next.js 16 (App Router) with TypeScript
+- One page home with About, Stack, Request, Works and Contact sections
+- Navigation highlights the section you are currently in
+- Bio popup made with the native HTML popover, no JavaScript needed
+- Works loaded from MySQL with Sequelize, with built in defaults if the database is offline
+- Details page for every work, with GitHub and live site links
+- REST API returning jsend responses for all works and for a single work
+- Animated stack ticker, front end moving right and back end moving left
+- CSS only animations, such as scroll driven image swaps and a rotating gold frame
+- Accessible markup with semantic lists, alt text and screen reader labels
+
+## Tech Stack
+
+- Language = TypeScript 5
+- Framework = Next.js 16 + React 19
+- Styling = Tailwind CSS 4
+- Fonts = Cormorant Garamond (next/font) + system font
+- Icons = Font Awesome
+- Database = MySQL hosted on Aiven
+- ORM = Sequelize 6 + mysql2
+- API responses = jsend
+- Hosting = Netlify
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (v20 or later recommended)
+- npm
+- A MySQL database (optional, the site falls back to default works without it)
+
+### Installing
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/Nikita-stud/portfolio-2026
+```
+
+2. Install the dependencies:
+
+```bash
+npm install
+```
+
+3. Run the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` - Starts the Next.js dev server
+- `npm run build` - Compiles TypeScript and bundles the app for production
+- `npm run start` - Serves the production build locally for testing
+- `npm run lint` - Runs ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Script Details
 
-## Learn More
+```json
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+```
 
-To learn more about Next.js, take a look at the following resources:
+### API Endpoints
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `GET /api/works` - Returns all works with their category
+- `GET /api/works/[title]` - Returns one work by its name
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Environment Variables
 
-## Deploy on Vercel
+```
+DATABASE_NAME=[your_db_name]
+ADMIN_USERNAME=[your_username]
+ADMIN_PASSWORD=[your_password]
+DB_PORT=[your_port]
+HOST=[your_host].aivencloud.com
+DIALECT=mysql
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You can always contact me through kontakt@fedutvikler.com
+
+@Nikita-stud

@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import db from '../../../../back-end/models';
-import WorkService from '../../../../back-end/services/WorkService';
-import type { Work } from '@/types';
+// import db from '../../../../back-end/models';
+// import WorkService from '../../../../back-end/services/WorkService';
+// import type { Work } from '@/types';
 import { defaultWorks } from '@/constants/works';
 
-const workService = new WorkService(db);
+// const workService = new WorkService(db);
 
 export default async function WorkPage({
   params,
@@ -14,8 +14,9 @@ export default async function WorkPage({
   params: Promise<{ title: string }>;
 }) {
   const { title } = await params;
-  const dbWorks: Work[] = await workService.getAll().catch(() => []);
-  const works = dbWorks.length > 0 ? dbWorks : defaultWorks;
+  // const dbWorks: Work[] = await workService.getAll().catch(() => []);
+  // const works = dbWorks.length > 0 ? dbWorks : defaultWorks;
+  const works = defaultWorks;
   const work = works.find(
     (work) => work.name.toLowerCase().replace(/\s+/g, '-') === title,
   );
