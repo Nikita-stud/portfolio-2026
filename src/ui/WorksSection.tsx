@@ -10,72 +10,52 @@ const workService = new WorkService(db);
 export default async function WorksSection() {
   const dbWorks: Work[] = await workService.getAll().catch(() => []);
   const works = dbWorks.length > 0 ? dbWorks : defaultWorks;
-  const categories = [...new Set(works.map((work) => work.Category.name))];
 
   return (
     <section id="works" className="mt-[120px] md:ml-[5%] lg:ml-[10%]">
-      <h2 className="font-cormorant font-[300] text-white text-h1-mobile lg:text-h1-desktop leading-(--line-height-default)">
+      <h2 className="font-cormorant text-white text-h1-mobile lg:text-h1-desktop ">
         WORKS
       </h2>
       <span
-        className="block w-full h-[1px] mt-[5px] mx-auto bg-gold md:mb-[30px] md:mx-0 md:w-[125px] lg:w-[190px]"
+        className="block  w-full h-[1px] mt-[5px] mb-[30px] mx-auto bg-gold md:mb-[40px] md:mx-0 md:w-[125px] lg:w-[190px]"
         aria-hidden="true"
       ></span>
-      {categories.map((category) => (
-        <div key={category} className="mt-[20px] md:mr-[100px] lg:mr-[140px]">
-          <h3
-            className={`text-white font-cormorant text-h2-mobile lg:text-h2-desktop ${
-              category === 'Back-end' ? 'text-right' : ''
-            }`}
-          >
-            {category}
-          </h3>
-          <ul
-            className={`grid grid-cols-2 gap-[20px] mt-[20px] md:gap-[50px] xl:grid-cols-3 ${
-              category === 'Back-end' ? '[direction:rtl] *:[direction:ltr]' : ''
-            }`}
-          >
-            {works
-              .filter((work) => work.Category.name === category)
-              .map((work) => (
-                <li key={work.id} className="flex flex-col">
-                  <article className="group relative flex-1 flex flex-col">
-                    <figure className="relative aspect-video overflow-hidden">
-                      <Image
-                        src={work.thumbnail}
-                        alt={`${work.name} thumbnail`}
-                        fill
-                        sizes="(min-width: 744px) 50vw, 100vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </figure>
-                    <h4
-                      className={`font-cormorant text-white text-h2-mobile line-clamp-2 mt-[15px] ${
-                        category === 'Back-end' ? 'text-right' : ''
-                      }`}
-                    >
-                      <Link
-                        href={`/work/${work.name.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="after:absolute after:inset-0"
-                      >
-                        {work.name}
-                      </Link>
-                    </h4>
-                    <p className="font-text line-clamp-2 mt-[10px]">
-                      {work.teaser}
-                    </p>
-                    <span
-                      className="block font-text text-xs-mobile text-gold-darker mt-auto pt-[10px] transition-colors duration-500 group-hover:text-gold-text"
-                      aria-hidden="true"
-                    >
-                      Read more
-                    </span>
-                  </article>
-                </li>
-              ))}
-          </ul>
-        </div>
-      ))}
+      <ul className="grid grid-cols-2 gap-[20px] mt-[20px] md:gap-[50px] md:mr-[100px] lg:mr-[140px] xl:grid-cols-3">
+        {works.map((work) => (
+          <li key={work.id} className="flex flex-col">
+            <article className="group relative flex-1 flex flex-col">
+              <figure className="relative aspect-video overflow-hidden">
+                <Image
+                  src={work.thumbnail}
+                  alt={`${work.name} thumbnail`}
+                  fill
+                  sizes="(min-width: 744px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <span className="absolute top-[10px] left-[10px] px-[5px] py-[2px] bg-dark border border-gold-darker font-text text-xs-mobile text-white">
+                  {work.Category.name}
+                </span>
+              </figure>
+              <h3 className="font-cormorant text-white text-h2-mobile line-clamp-2 mt-[15px]">
+                <Link
+                  href={`/work/${work.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="after:absolute after:inset-0"
+                >
+                  {work.name}
+                </Link>
+              </h3>
+              <p className="font-text line-clamp-2 mt-[10px]">{work.teaser}</p>
+              <span
+                className="block font-text text-xs-mobile text-gold-darker mt-auto pt-[10px] transition-colors duration-500 group-hover:text-gold-text"
+                aria-hidden="true"
+              >
+                Read more{' '}
+                <i className="fa-solid fa-arrow-right text-[14px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></i>
+              </span>
+            </article>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

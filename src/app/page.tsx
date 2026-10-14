@@ -66,6 +66,7 @@ export default function Home() {
         <Image
           src="/main.jpg"
           alt="Marble wrestlers statue in a dark gallery of gilded paintings"
+          loading="eager"
           fill
           sizes="100vw"
           className="object-cover"

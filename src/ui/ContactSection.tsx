@@ -22,11 +22,11 @@ const steps = [
 export default function ContactSection() {
   return (
     <section id="contact" className="mt-[100px] md:ml-[5%] lg:ml-[10%]">
-      <h2 className="font-cormorant font-[300] text-white text-h1-mobile  lg:text-h1-desktop leading-(--line-height-default)">
+      <h2 className="font-cormorant  text-white text-h1-mobile  lg:text-h1-desktop">
         CONTACT
       </h2>
       <span
-        className="block w-full h-[1px] mt-[5px] mx-auto bg-gold md:mb-[50px] md:mx-0 md:w-[165px] lg:w-[260px]"
+        className="block w-full h-[1px] mt-[5px] mx-auto bg-gold md:mb-[40px] md:mx-0 md:w-[165px] lg:w-[260px]"
         aria-hidden="true"
       ></span>
 
