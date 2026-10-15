@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import BioPopup from '@/ui/BioPopup';
 import WorksSection from '@/ui/WorksSection';
-import RequestSection from '@/ui/RequestSection';
+import ConquestSection from '@/ui/ConquestSection';
 import ContactSection from '@/ui/ContactSection';
 import StackSection from '@/ui/StackSection';
 import { siteUrl, siteName, siteTitle, brand } from '@/constants/site';
@@ -122,25 +122,7 @@ export default function Home() {
         <i className="fa-solid fa-arrow-up text-[20px]" aria-hidden="true"></i>
       </a>
 
-      <RequestSection />
-      <figure className="relative h-[500px] mt-[100px] -mx-[20px] sm:-mx-[35px] md:-mx-[50px] md:h-[700px] xl:h-[900px]">
-        <Image
-          src="/main.jpg"
-          alt="Marble wrestlers statue in a dark gallery of gilded paintings"
-          loading="eager"
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-        <span
-          className="absolute inset-x-0 top-0 h-[30%] bg-linear-to-b from-dark to-transparent"
-          aria-hidden="true"
-        ></span>
-        <span
-          className="absolute inset-x-0 bottom-0 h-[30%] bg-linear-to-t from-dark to-transparent"
-          aria-hidden="true"
-        ></span>
-      </figure>
+      <ConquestSection />
       <WorksSection />
       <ContactSection />
     </>

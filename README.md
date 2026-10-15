@@ -7,7 +7,7 @@ Explore the website by visiting the link - [Fedorov Utvikler](ADD_LIVE_LINK_HERE
 ## Key Features
 
 - Built on Next.js 16 (App Router) with TypeScript
-- One page home with About, Stack, Request, Works and Contact sections
+- One page home with About, Stack, Conquest, Works and Contact sections
 - Navigation highlights the section you are currently in
 - Bio popup made with the native HTML popover, no JavaScript needed
 - Works loaded from MySQL with Sequelize, with built in defaults if the database is offline
