@@ -33,6 +33,7 @@ const jsonLd = {
       sameAs: [
         'https://github.com/Nikita-stud',
         'https://www.behance.net/fedutvikler',
+        'https://www.linkedin.com/in/nikita-fedorov-757aaa402/',
       ],
       knowsAbout: [
         'TypeScript',

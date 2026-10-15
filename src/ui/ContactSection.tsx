@@ -77,7 +77,7 @@ export default function ContactSection() {
         ))}
       </ol>
       <div className="relative z-20 mt-[40px]">
-        <div className="w-full md:w-[min(750px,100%)] xl:w-full">
+        <div className="md:mr-[100px] md:max-w-[750px] lg:mr-[140px] xl:max-w-none">
           <p className="font-text text-white text-xs-mobile mt-[20px] leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose) xl:text-body-desktop">
             Feel free to send an email or call anytime for a chit chat.
           </p>
@@ -113,6 +113,14 @@ export default function ContactSection() {
               aria-label="Behance"
             >
               <i className="fa-brands fa-behance" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nikita-fedorov-757aaa402/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i className="fa-brands fa-linkedin" aria-hidden="true"></i>
             </a>
           </div>
         </div>
