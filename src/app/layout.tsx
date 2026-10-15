@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: '/',
     siteName,
-    locale: 'en_US',
+    locale: 'en_GB',
     title: siteTitle,
     description: siteDescription,
     images: [
@@ -60,7 +60,7 @@ const cormorant = Cormorant_Garamond({
   weight: ['300', '400'],
   style: ['normal', 'italic'],
   variable: '--font-cormorant',
-  preload: false,
+  preload: true,
 });
 
 export default function RootLayout({
@@ -80,9 +80,7 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
         <Header />
-        <main className="p-[20px] sm:p-[35px] md:p-[50px]">
-          {children}
-        </main>
+        <main className="p-[20px] sm:p-[35px] md:p-[50px]">{children}</main>
         <Footer />
       </body>
     </html>

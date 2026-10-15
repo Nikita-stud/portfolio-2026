@@ -41,7 +41,7 @@ export default function BioPopup() {
             <Image
               src="/me.jpeg"
               alt="Portrait of Nikita Fedorov"
-              loading="lazy"
+              loading="eager"
               fill
               sizes="(min-width: 1280px) 450px, (min-width: 1024px) 350px, (min-width: 744px) 300px, 400px"
               className="object-cover"
@@ -49,7 +49,7 @@ export default function BioPopup() {
             <Image
               src="/me2.jpeg"
               alt="Portrait of Nikita Fedorov"
-              loading="lazy"
+              loading="eager"
               fill
               sizes="(min-width: 1280px) 450px, (min-width: 1024px) 350px, (min-width: 744px) 300px, 400px"
               className="object-cover scroll-swap"

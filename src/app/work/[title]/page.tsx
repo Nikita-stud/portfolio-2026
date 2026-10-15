@@ -119,7 +119,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
             >
               Back to home
               <i
-                className="fa-solid fa-arrow-right text-[14px] ml-[5px] opacity-0 transition-opacity duration-500 group-hover:opacity-100 xl:text-[20px]"
+                className="fa-solid fa-arrow-right text-[14px] ml-[5px] opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-md:opacity-100 xl:text-[20px]"
                 aria-hidden="true"
               ></i>
             </Link>

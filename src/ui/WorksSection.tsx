@@ -54,7 +54,7 @@ export default async function WorksSection() {
                 aria-hidden="true"
               >
                 Read more{' '}
-                <i className="fa-solid fa-arrow-right text-[14px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></i>
+                <i className="fa-solid fa-arrow-right text-[14px] opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-md:opacity-100"></i>
               </span>
             </article>
           </li>

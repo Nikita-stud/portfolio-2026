@@ -26,7 +26,7 @@ const jsonLd = {
       '@id': `${siteUrl}/#person`,
       name: siteName,
       url: siteUrl,
-      jobTitle: 'Full-Stack Developer',
+      jobTitle: 'Full Stack Engineer',
       email: 'mailto:kontakt@fedutvikler.com',
       image: `${siteUrl}/me.jpeg`,
       address,
@@ -81,6 +81,7 @@ export default function Home() {
                   <Image
                     src="/nike.jpg"
                     alt="Image of Nike the goddess of victory"
+                    preload
                     loading="eager"
                     fill
                     sizes="(min-width: 1280px) 450px, (min-width: 1024px) 350px, (min-width: 744px) 300px, 400px"
