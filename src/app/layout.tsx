@@ -80,7 +80,7 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
         <Header />
-        <main className="flex-1 p-[20px] sm:p-[35px] md:p-[50px]">
+        <main className="p-[20px] sm:p-[35px] md:p-[50px]">
           {children}
         </main>
         <Footer />

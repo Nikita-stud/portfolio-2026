@@ -4,15 +4,15 @@ export default function ConquestSection() {
   return (
     <section id="conquest" className="mt-[50px] md:mt-[100px]">
       <div className="md:ml-[5%] md:mr-[100px] lg:ml-[10%] lg:mr-[140px]">
-        <h2 className="font-cormorant  text-white text-h1-mobile lg:text-h1-desktop ">
+        <h2 className="font-cormorant text-white text-h1-mobile lg:text-h1-desktop">
           CONQUEST
         </h2>
         <span
-          className="block  w-[185px] h-[1px] mt-[5px] mb-[30px] bg-gold md:mb-[30px] md:mx-0  lg:w-[285px]"
+          className="block w-[185px] h-[1px] mt-[5px] mb-[30px] bg-gold lg:w-[285px]"
           aria-hidden="true"
         ></span>
         <div>
-          <p className="font-text text-white mb-[20px] leading-[1.8] lg:leading-[1.4] xl:text-body-desktop">
+          <p className="font-text text-white text-xs-mobile mb-[20px] leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose) lg:leading-(--line-height-tight) xl:text-body-desktop">
             My path here was not a straight line. I started out as a carpenter,
             building things you could touch, before studying business in
             Germany. Then I found code and never looked back. I studied frontend
@@ -25,7 +25,7 @@ export default function ConquestSection() {
               className="block w-[280px] h-[1px] mb-[20px] bg-gold"
               aria-hidden="true"
             ></span>
-            <p className="font-text text-white  leading-[1.8] lg:leading-[1.4] xl:text-body-desktop">
+            <p className="font-text text-white text-xs-mobile leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose) lg:leading-(--line-height-tight) xl:text-body-desktop">
               Before excellence the immortal gods have placed sweat. Long and
               steep is the path to it, and rough at first, but once you reach
               the top, it becomes easy, however hard it was.

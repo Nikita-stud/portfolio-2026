@@ -20,9 +20,10 @@
   --breakpoint-md: 744px;
 
   --line-height-default: 1.2;
+  --line-height-tight: 1.4;
+  --line-height-loose: 1.8;
 
   --font-cormorant: var(--font-cormorant);
-  --font-headers: var(--font-cormorant);
   --font-text: system-ui, -apple-system, sans-serif;
 }
 
@@ -122,30 +123,6 @@
   }
 }
 
-/* ----- BACK TO TOP -----*/
-@utility scroll-show {
-  @supports (animation-timeline: scroll()) {
-    opacity: 0;
-    visibility: hidden;
-    animation-name: scroll-show;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-    animation-timeline: scroll(root);
-  }
-}
-@keyframes scroll-show {
-  0%,
-  5% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  20%,
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
 /* ----- HERO FRAME -----*/
 @property --frame-angle {
   syntax: '<angle>';
@@ -239,7 +216,7 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: var(--header-width);
+      width: auto;
       height: 100dvh;
       padding: 50px;
     }
@@ -247,24 +224,12 @@
     nav ul {
       flex-direction: column;
       align-items: center;
-      margin-top: 40dvh;
-
       gap: 30px;
-    }
-    nav ul li {
-      transform: rotate(90);
     }
 
     /*----- HERO ------*/
     .frame {
-      border: 10px solid transparent;
-      border-image: linear-gradient(
-          var(--frame-angle),
-          var(--color-gold-darker) 0%,
-          var(--color-gold) 50%,
-          var(--color-gold-darker) 100%
-        )
-        1;
+      border-width: 10px;
     }
   }
 

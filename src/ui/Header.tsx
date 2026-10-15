@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import SideName from '@/ui/SideName';
 
@@ -12,6 +13,7 @@ const navLinks = [
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('');
+  const pathname = usePathname();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,7 +31,7 @@ export default function Header() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return (
     <header className="relative z-40 bg-dark pt-[20px] sm:px-[35px] md:fixed md:pl-[0px] md:pt-[90px] md:pr-[50px] md:z-10 md:bg-transparent lg:pt-[35px] xl:pt-[10px]">
@@ -40,11 +42,15 @@ export default function Header() {
           aria-hidden="true"
         ></span>
         <nav className="delay-show ml-auto md:flex md:h-[398px] lg:h-[577px] md:items-end">
-          <ul className="md:mt-0">
+          <ul>
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.querySelector(link.href)?.scrollIntoView();
+                  }}
                   className={
                     activeSection === link.href
                       ? 'font-bold text-gold-text'

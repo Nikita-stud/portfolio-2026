@@ -22,11 +22,11 @@ const steps = [
 export default function ContactSection() {
   return (
     <section id="contact" className="mt-[100px] md:ml-[5%] lg:ml-[10%]">
-      <h2 className="font-cormorant  text-white text-h1-mobile  lg:text-h1-desktop">
+      <h2 className="font-cormorant text-white text-h1-mobile lg:text-h1-desktop">
         CONTACT
       </h2>
       <span
-        className="block w-[170px] h-[1px] mt-[5px] bg-gold md:mb-[40px] md:mx-0 md:w-[165px] lg:w-[260px]"
+        className="block w-[170px] h-[1px] mt-[5px] bg-gold md:mb-[40px] md:w-[165px] lg:w-[260px]"
         aria-hidden="true"
       ></span>
 
@@ -64,7 +64,7 @@ export default function ContactSection() {
                 style={{ width: `${index * 100}%` }}
               ></span>
               <span
-                className={` absolute left-1/2 w-[2px] -translate-x-1/2 bg-grey/30 transition-colors duration-500 group-hover:bg-gold ${
+                className={`absolute left-1/2 w-[2px] -translate-x-1/2 bg-grey/30 transition-colors duration-500 group-hover:bg-gold ${
                   index % 2 === 1 ? 'top-1/2 bottom-0' : 'top-0 bottom-1/2'
                 }`}
               ></span>
@@ -78,26 +78,26 @@ export default function ContactSection() {
       </ol>
       <div className="relative z-20 mt-[40px]">
         <div className="w-full md:w-[min(750px,100%)] xl:w-full">
-          <p className=" xl:text-body-desktop mt-[20px] leading-[1.8]">
+          <p className="font-text text-white text-xs-mobile mt-[20px] leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose) xl:text-body-desktop">
             Feel free to send an email or call anytime for a chit chat.
           </p>
-          <p className="xl:text-body-desktop leading-[1.8]">
+          <p className="font-text text-white text-xs-mobile leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose) xl:text-body-desktop">
             If you have an idea but don&apos;t know where to start, we will
             figure it out together.
           </p>
-          <p className="xl:text-body-desktop leading-[1.8]">
+          <p className="font-text text-white text-xs-mobile leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose) xl:text-body-desktop">
             The most important step is to take that first step!
           </p>
         </div>
-        <div className="flex flex-wrap items-center justify-between gap-x-[20px] gap-y-[10px] my-[20px] mt-[30px]">
+        <div className="flex flex-wrap items-center justify-between gap-x-[20px] gap-y-[30px] mt-[30px] mb-[20px]">
           <a
             href="mailto:kontakt@fedutvikler.com"
-            className="block w-fit font-cormorant text-gold-text text-h2-mobile lg:text-h2-desktop"
+            className="w-fit font-cormorant text-gold-text text-h2-mobile lg:text-h2-desktop"
           >
-            <i className="fa-solid fa-envelope text-gold-text text-body-mobile"></i>{' '}
+            <i className="fa-solid fa-envelope text-body-mobile"></i>{' '}
             kontakt@fedutvikler.com
           </a>
-          <div className="mt-[20px] flex gap-[20px] text-white text-[30px] sm:mt-[0px]">
+          <div className="flex gap-[20px] text-white text-[30px]">
             <a
               href="https://github.com/Nikita-stud"
               target="_blank"

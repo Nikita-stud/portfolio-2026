@@ -68,8 +68,8 @@ export default function Home() {
         }}
       />
       <div id="about" className="md:mt-[35px] lg:mt-[50px] xl:mt-[80px]">
-        <div className="flex flex-col md:flex-row ">
-          <div className="m-auto md:mr-[20px] md:ml-[5%] lg:mr-[20px] lg:ml-[10%] xl:mr-[50px]">
+        <div className="flex flex-col md:flex-row">
+          <div className="m-auto md:mr-[20px] md:ml-[5%] lg:ml-[10%] xl:mr-[50px]">
             <button
               type="button"
               popoverTarget="bio"

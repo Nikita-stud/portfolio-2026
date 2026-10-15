@@ -15,11 +15,11 @@ export default async function WorksSection() {
 
   return (
     <section id="works" className="mt-[120px] md:ml-[5%] lg:ml-[10%]">
-      <h2 className="font-cormorant text-white text-h1-mobile lg:text-h1-desktop ">
+      <h2 className="font-cormorant text-white text-h1-mobile lg:text-h1-desktop">
         WORKS
       </h2>
       <span
-        className="block  w-[125px] h-[1px] mt-[5px] mb-[30px] bg-gold md:mb-[40px] md:mx-0 md:w-[125px] lg:w-[190px]"
+        className="block w-[125px] h-[1px] mt-[5px] mb-[30px] bg-gold md:mb-[40px] lg:w-[190px]"
         aria-hidden="true"
       ></span>
       <ul className="grid grid-cols-2 gap-[20px] mt-[20px] md:gap-[50px] md:mr-[100px] lg:mr-[140px] xl:grid-cols-3">

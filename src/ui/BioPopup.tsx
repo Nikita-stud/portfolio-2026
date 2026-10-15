@@ -73,7 +73,7 @@ export default function BioPopup() {
             className="block w-[280px] h-[1px] mt-[20px] mx-auto bg-gold md:mx-0"
             aria-hidden="true"
           ></span>
-          <p className="mt-[30px] leading-[1.8]">
+          <p className="font-text text-white text-xs-mobile mt-[30px] leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose)">
             Hello there traveler, I am Nikita Fedorov, a full stack engineer
             with a vocational degree in Front
             <i
@@ -90,19 +90,19 @@ export default function BioPopup() {
             <span className="sr-only">-</span>
             End Development at the same institution.
           </p>
-          <p className="mt-[20px] leading-[1.8]">
+          <p className="font-text text-white text-xs-mobile mt-[20px] leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose)">
             Before enrolling at Noroff in October 2022, I worked as a security
             guard at the National Museum in Oslo, Norway. Working multiple jobs
             such as being an event manager, secretary and housekeeper at the
             same time.
           </p>
-          <p className="mt-[20px] leading-[1.8]">
+          <p className="font-text text-white text-xs-mobile mt-[20px] leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose)">
             I also enrolled in and received a diploma as a qualified carpenter
             back in 2019. This course was fundamental in enhancing various
             skills such as mathematics, mechanical drawing and attention to
             detail.
           </p>
-          <p className="mt-[20px] leading-[1.8]">
+          <p className="font-text text-white text-xs-mobile mt-[20px] leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose)">
             After receiving the diploma, I moved to Germany in 2019 to study
             international business administration at the University of
             Hochschule Worms, where I studied and applied knowledge of

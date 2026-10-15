@@ -67,7 +67,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
           className="object-contain"
         />
       </figure>
-      <p className="font-text mt-[20px] leading-[1.8] md:w-[min(750px,100%)]">
+      <p className="font-text text-white text-xs-mobile mt-[20px] leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose) md:w-[min(750px,100%)]">
         {work.description}
       </p>
       <div className="flex gap-[20px] mt-[20px] font-cormorant text-gold-text text-h2-mobile">
