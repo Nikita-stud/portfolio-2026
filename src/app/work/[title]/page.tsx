@@ -53,34 +53,78 @@ export default async function WorkPage({ params }: WorkPageProps) {
   if (!work) notFound();
 
   return (
-    <article className="md:ml-[5%] lg:ml-[10%]">
-      <Link href="/#works" className="font-cormorant text-gold-text">
-        Back to works
-      </Link>
-      <h1 className="mt-[20px]">{work.name}</h1>
-      <figure className="relative aspect-[16/10] mt-[20px] md:w-[min(750px,100%)]">
-        <Image
-          src={work.thumbnail}
-          alt={`${work.name} thumbnail`}
-          fill
-          sizes="(min-width: 744px) 750px, 100vw"
-          className="object-contain"
-        />
-      </figure>
-      <p className="font-text text-white text-xs-mobile mt-[20px] leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose) md:w-[min(750px,100%)]">
-        {work.description}
-      </p>
-      <div className="flex gap-[20px] mt-[20px] font-cormorant text-gold-text text-h2-mobile">
-        {work.github && (
-          <a href={work.github} target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-        )}
-        {work.live_url && (
-          <a href={work.live_url} target="_blank" rel="noopener noreferrer">
-            Live site
-          </a>
-        )}
+    <article className="max-md:-mt-[20px] md:ml-[5%] md:mr-[100px] lg:ml-[10%] lg:mr-[140px] xl:flex xl:flex-col xl:justify-center xl:min-h-full">
+      <div className="xl:grid xl:grid-cols-[2fr_3fr] xl:grid-rows-[auto_1fr] xl:gap-x-[50px]">
+        <h1 className="delay-show xl:col-start-2 mb-[20px] xl:mb-[0px]">
+          {work.name}
+        </h1>
+        <figure className="delay-show md:w-[min(750px,100%)] xl:col-start-1 xl:row-start-1 xl:row-span-2 xl:self-center">
+          <div className="frame frame-spin max-xl:border-0 xl:p-[10px]">
+            <Image
+              src={work.thumbnail}
+              alt={`${work.name} thumbnail`}
+              width={0}
+              height={0}
+              sizes="(min-width: 744px) 750px, 100vw"
+              className="w-full h-auto"
+            />
+          </div>
+        </figure>
+        <div className="delay-show xl:col-start-2 mt-[30px] xl:mt-[0px]">
+          <span
+            className="block w-[280px] h-[1px] my-[20px] bg-gold"
+            aria-hidden="true"
+          ></span>
+          <p className="font-text text-white text-xs-mobile leading-(--line-height-tight) md:text-body-mobile md:leading-(--line-height-loose) md:w-[min(750px,100%)]">
+            {work.description}
+          </p>
+          <span
+            className="block w-[280px] h-[1px] mt-[20px] bg-gold"
+            aria-hidden="true"
+          ></span>
+          <div className="flex items-baseline gap-[20px] mt-[20px] font-cormorant text-gold-darker text-h2-mobile lg:text-h2-desktop md:w-[min(750px,100%)]">
+            {work.github && (
+              <a
+                href={work.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="transition-colors duration-500 hover:text-gold-text"
+              >
+                <i
+                  className="fa-brands fa-github text-[30px] mr-[8px]"
+                  aria-hidden="true"
+                ></i>
+                GitHub
+              </a>
+            )}
+            {work.live_url && (
+              <a
+                href={work.live_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Live site"
+                className="transition-colors duration-500 hover:text-gold-text"
+              >
+                <i
+                  className="fa-solid fa-globe text-[30px] mr-[8px]"
+                  aria-hidden="true"
+                ></i>
+                Live
+              </a>
+            )}
+            <Link
+              href="/"
+              className="group ml-auto transition-colors duration-500 hover:text-gold-text"
+            >
+              Back to home
+              <i
+                className="fa-solid fa-arrow-right text-[14px] ml-[5px] opacity-0 transition-opacity duration-500 group-hover:opacity-100 xl:text-[20px]"
+                aria-hidden="true"
+              ></i>
+            </Link>
+          </div>
+        </div>
       </div>
     </article>
   );

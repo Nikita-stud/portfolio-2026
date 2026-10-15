@@ -46,10 +46,13 @@ export default function Header() {
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
-                  href={link.href}
+                  href={`/${link.href}`}
                   onClick={(e) => {
-                    e.preventDefault();
-                    document.querySelector(link.href)?.scrollIntoView();
+                    const section = document.querySelector(link.href);
+                    if (section) {
+                      e.preventDefault();
+                      section.scrollIntoView();
+                    }
                   }}
                   className={
                     activeSection === link.href

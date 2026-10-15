@@ -3,11 +3,11 @@ import type { Work } from '@/types';
 export const defaultWorks: Work[] = [
   {
     id: 4,
-    name: 'Exam Project 2',
+    name: 'Holidaze',
     teaser:
-      'Holidaze, a Next.js and TypeScript venue booking site where guests and venue managers register, browse venues and book stays.',
+      'Next.js and TypeScript venue booking site where guests and venue managers register, browse venues and book stays.',
     description:
-      'Holidaze was my final exam, focused on React within Next.js. The task was to build a working venue booking website using modern solutions and the knowledge gained throughout the courses. It is built with Next.js and TypeScript, uses Zustand for state, React Hook Form and Zod for form validation, Tailwind CSS for styling and the Noroff Holidaze API for data. Visitors can register as a user or a venue manager, browse a paginated list of venues with ten venues per page, and open a details page for each venue with a date picker that shows its availability. Both users and venue managers can book stays and see their upcoming bookings.',
+      'Holidaze is a venue booking website where guests can find and book places to stay, and venue managers can handle their bookings. Users register as either a regular guest or a venue manager. Visitors can browse every available venue on a paginated listing, showing twelve venues per page. Each venue has its own detail page with a date picker that shows which dates are free, so booking a stay only takes a few clicks. Once booked, guests can see their upcoming stays, and venue managers can book stays too and keep track of their upcoming bookings. Every form on the site is validated with Zod, so users get clear feedback when something is missing or wrong before anything is sent.',
     thumbnail: '/ep2.jpg',
     github: 'https://github.com/Nikita-stud/Project-Exam2',
     live_url: 'https://holidaze-home.netlify.app/',
@@ -17,11 +17,11 @@ export const defaultWorks: Work[] = [
   },
   {
     id: 2,
-    name: 'JavaScript Frameworks',
+    name: 'Prod Inc',
     teaser:
       'Team project, React and TypeScript shop with TanStack Router, Zustand cart, URL-based search and paginated product listings.',
     description:
-      'Full description of Exam 1 for the article page. Write as much as you need about the goal, process, stack and result.',
+      'PROD INC is an online shop where users can browse products, search the catalogue and build up a shopping cart. It was built as a team project. Anyone can explore the full product catalogue without logging in. Products are shown on a paginated listing with ten items per page. A search bar filters products through the URL query, so search results can be shared or bookmarked. Each product has its own detail page showing its price and rating. Users can add products to their cart or remove them, and the cart calculates the total automatically as items change.',
     thumbnail: '/jsframework.jpg',
     github: 'https://github.com/NoroffFEU/jsfw-2025-v1-reactjsf26',
     live_url: 'https://js-frameworkca.netlify.app/',
@@ -31,11 +31,11 @@ export const defaultWorks: Work[] = [
   },
   {
     id: 3,
-    name: 'Semester Project 2',
+    name: 'FarmersBid',
     teaser:
       'An auction site where users sign up, list items and bid with credits, plus search and user profiles.',
     description:
-      'Semester project: an auction site where users sign up, list items and bid with credits, plus search and user profiles. Semester project: an auction site where users sign up, list items and bid with credits, plus search and user profiles.Semester project: an auction site where users sign up, list items and bid with credits, plus search and user profiles.',
+      "FarmersBid is an auction website where users can buy and sell through live bidding. New users register an account and receive a starting balance of credits, which they use to bid on other users' listings. Anyone can visit the site, browse the auctions and search for specific items without needing an account. Once logged in, users get access to the full experience. They can place bids, edit their profile and keep track of how many credits they have left. Each user has a personal overview of their activity, showing their active bids, auctions they've won, expired listings and the items they have listed themselves. This makes it easy to follow everything happening on their account in one place.",
     thumbnail: '/sp2.jpg',
     github: 'https://github.com/Nikita-stud/Semester-Project2',
     live_url: 'https://semester-project-two.netlify.app/',
@@ -63,7 +63,7 @@ export const defaultWorks: Work[] = [
     teaser:
       'My first website, a jacket store in HTML and CSS, later upgraded with JavaScript, loading states and error handling.',
     description:
-      'RainyDays was my very first website and the starting point of my journey into web development. It was created as my first exam project, at a stage when I had only just learned the basics of design, HTML and CSS. Out of three possible concepts, each with its own set of provided images, I chose to build an online store for outdoor jackets. The original version was built entirely with HTML and CSS, with no JavaScript, loading indicators or error handling. As my studies progressed, the project was revisited and upgraded to reflect the new skills I had gained. Products are now fetched dynamically with JavaScript, and the site displays loading states while content is on its way and clear error messages if something goes wrong. The home page introduces the store with a selection of jackets and the categories available to browse. From there, the Deals, Women and Men pages each show the jackets belonging to that category, while the full jacket list brings every product from across the site together in one place. Selecting a jacket opens its details page, where the visitor can read more about it before moving on to purchase.',
+      'RainyDays was my very first website and the starting point of my journey into web development. It was created as my first exam project, at a stage when I had only just learned the basics of design, HTML and CSS. The original version was built entirely with no JavaScript, loading indicators or error handling. The project was revisited and upgraded to reflect the new skills I had gained. Products are now fetched dynamically with JavaScript, and the site displays loading states while content is on its way and clear error messages if something goes wrong. The home page introduces the store with a selection of jackets and the categories available to browse. Selecting a jacket opens its details page, where the visitor can read more about it before moving on to purchase.',
     thumbnail: '/interaction.jpg',
     github: 'https://github.com/Nikita-stud/Interaction-Design',
     live_url: 'https://rainjackets.netlify.app/list-of-jackets',
@@ -77,7 +77,7 @@ export const defaultWorks: Work[] = [
     teaser:
       'Express and Sequelize e-commerce API on MySQL, with an EJS admin panel for products, users, discounts and categories.',
     description:
-      'The back end (port 3000) is a REST API built with Express and Sequelize, connected to a MySQL database. It owns all the data and business logic: the Sequelize models that define the 3NF database tables, product management with soft delete, categories and brands, membership discounts, the cart and the calculation of order totals. It also handles authentication and issues a JWT when a user logs in. The back end never renders any pages; it only receives requests and responds with JSON. The front end (port 3001) is the admin interface, built with Express, EJS templates and Bootstrap. It has no direct access to the database. Instead, every action an admin takes in the UI, such as adding a product, editing a brand or promoting a user to admin, is sent as an HTTP request to the back-end API on port 3000. The front end then renders the response into an EJS view.',
+      'The back end (port 3000) is a REST API built with Express and Sequelize, connected to a MySQL database. It owns all the data and business logic: the Sequelize models that define the 3NF database tables, product management with soft delete, categories and brands, membership discounts, the cart and the calculation of order totals. It also handles authentication and issues a JWT when a user logs in. The back end never renders any pages; it only receives requests and responds with JSON. The front end (port 3001) is the admin interface, built with Express, EJS templates and Bootstrap. Every action an admin takes in the UI, such as adding a product, editing a brand or promoting a user to admin, is sent as an HTTP request to the back-end API on port 3000.',
     thumbnail: '/ep1.jpg',
     github:
       'https://github.com/noroff-backend-1/2025-10-onl-pbed1-pbnd2-ft-oct25ft-ep1-ca-nikita-stud',
