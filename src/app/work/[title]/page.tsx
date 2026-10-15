@@ -89,13 +89,13 @@ export default async function WorkPage({ params }: WorkPageProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="transition-colors duration-500 hover:text-gold-text"
+                className="text-gold transition-colors duration-500 hover:text-gold-darker"
               >
                 <i
-                  className="fa-brands fa-github text-[30px] mr-[8px]"
+                  className="fa-brands fa-github text-[30px] md:mr-[8px]"
                   aria-hidden="true"
                 ></i>
-                GitHub
+                <span className="max-md:hidden">GitHub</span>
               </a>
             )}
             {work.live_url && (
@@ -104,18 +104,18 @@ export default async function WorkPage({ params }: WorkPageProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Live site"
-                className="transition-colors duration-500 hover:text-gold-text"
+                className="text-gold transition-colors duration-500 hover:text-gold-darker"
               >
                 <i
-                  className="fa-solid fa-globe text-[30px] mr-[8px]"
+                  className="fa-solid fa-globe text-[30px] md:mr-[8px]"
                   aria-hidden="true"
                 ></i>
-                Live
+                <span className="max-md:hidden">Live</span>
               </a>
             )}
             <Link
               href="/"
-              className="group ml-auto transition-colors duration-500 hover:text-gold-text"
+              className="group ml-auto text-gold transition-colors duration-500 hover:text-gold-darker"
             >
               Back to home
               <i

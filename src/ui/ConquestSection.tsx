@@ -30,7 +30,7 @@ export default function ConquestSection() {
               steep is the path to it, and rough at first, but once you reach
               the top, it becomes easy, however hard it was.
             </p>
-            <p className="font-text text-xs-mobile text-gold-darker mt-[10px]">
+            <p className="font-text text-xs-mobile text-gold mt-[10px]">
               Hesiod, <cite>Works and Days</cite>
             </p>
             <span

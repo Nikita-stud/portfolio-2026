@@ -50,7 +50,7 @@ export default async function WorksSection() {
                 {work.teaser}
               </p>
               <span
-                className="block font-text text-xs-mobile text-gold-darker pt-[10px] transition-colors duration-500 group-hover:text-gold-text"
+                className="block font-text text-xs-mobile text-gold pt-[10px] transition-colors duration-500 group-hover:text-gold-darker"
                 aria-hidden="true"
               >
                 Read more{' '}

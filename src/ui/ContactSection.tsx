@@ -92,7 +92,7 @@ export default function ContactSection() {
         <div className="flex flex-wrap items-center justify-between gap-x-[20px] gap-y-[30px] mt-[30px] mb-[20px]">
           <a
             href="mailto:kontakt@fedutvikler.com"
-            className="w-fit font-cormorant text-gold-text text-h2-mobile lg:text-h2-desktop"
+            className="w-fit font-cormorant text-gold text-h2-mobile transition-colors duration-500 hover:text-gold-darker lg:text-h2-desktop"
           >
             <i className="fa-solid fa-envelope text-body-mobile"></i>{' '}
             kontakt@fedutvikler.com
