@@ -23,7 +23,7 @@ export const defaultWorks: Work[] = [
     description:
       'PROD INC is an online shop where users can browse products, search the catalogue and build up a shopping cart. It was built as a team project. Anyone can explore the full product catalogue without logging in. Products are shown on a paginated listing with ten items per page. A search bar filters products through the URL query, so search results can be shared or bookmarked. Each product has its own detail page showing its price and rating. Users can add products to their cart or remove them, and the cart calculates the total automatically as items change.',
     thumbnail: '/jsframework.jpg',
-    github: 'https://github.com/NoroffFEU/jsfw-2025-v1-reactjsf26',
+    github: 'https://github.com/Nikita-stud/Prod-Inc',
     live_url: 'https://js-frameworkca.netlify.app/',
     date: '2026-03-29',
     status: 'Completed',
@@ -79,8 +79,7 @@ export const defaultWorks: Work[] = [
     description:
       'The back end (port 3000) is a REST API built with Express and Sequelize, connected to a MySQL database. It owns all the data and business logic: the Sequelize models that define the 3NF database tables, product management with soft delete, categories and brands, membership discounts, the cart and the calculation of order totals. It also handles authentication and issues a JWT when a user logs in. The back end never renders any pages; it only receives requests and responds with JSON. The front end (port 3001) is the admin interface, built with Express, EJS templates and Bootstrap. Every action an admin takes in the UI, such as adding a product, editing a brand or promoting a user to admin, is sent as an HTTP request to the back-end API on port 3000.',
     thumbnail: '/ep1.jpg',
-    github:
-      'https://github.com/noroff-backend-1/2025-10-onl-pbed1-pbnd2-ft-oct25ft-ep1-ca-nikita-stud',
+    github: 'https://github.com/Nikita-stud/Backend-Admin1',
     live_url: null,
     date: '2026-10-11',
     status: 'Completed',
