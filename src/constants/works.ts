@@ -49,24 +49,24 @@ export const defaultWorks: Work[] = [
     teaser:
       'A travel blog powered by WordPress, with featured posts, filtering, load-more listings and clickable images.',
     description:
-      'I put all my design knowledge into making the website as visually balanced and appealing as possible, and the result reflects my enthusiasm for both the technical and the creative side of web development.All content on the site is fetched from a WordPress account, which acts as a headless CMS. This means the posts are written and managed in WordPress, while the website itself retrieves the data through the API and displays it in its own custom design. The home page gives visitors an overview of the blog, with a featured post, the latest articles and a selection of posts from a chosen continent. The posts page lists ten articles at a time, with a load more button to reveal further posts and a filter to narrow down the results. Opening a post leads to its details page, which displays the full article along with images that can be clicked to view in larger size.',
+      'The site was originally built with WordPress as a headless CMS, but I later migrated it to the Noroff API v2, which meant renaming and rewriting all the fetch calls to match the new endpoints. The home page shows a featured post, the latest articles and a selection of posts from a chosen continent. The posts page lists ten articles at a time, with a load more button and a filter to narrow down the results. Each post opens on a details page with the full article, and images can be clicked to view in larger size.',
     thumbnail: '/travel.jpg',
     github: 'https://github.com/Nikita-stud/project-exam-1',
-    live_url: 'https://the-traveler-blog.netlify.app/list-of-posts',
+    live_url: 'https://the-traveler-blog.netlify.app',
     date: '2024-10-13',
     status: 'Completed',
     Category: { id: 1, name: 'Front-end' },
   },
   {
     id: 6,
-    name: 'Interaction Design',
+    name: 'Rainy Days',
     teaser:
       'My first website, a jacket store in HTML and CSS, later upgraded with JavaScript, loading states and error handling.',
     description:
       'RainyDays was my very first website and the starting point of my journey into web development. It was created as my first exam project, at a stage when I had only just learned the basics of design, HTML and CSS. The original version was built entirely with no JavaScript, loading indicators or error handling. The project was revisited and upgraded to reflect the new skills I had gained. Products are now fetched dynamically with JavaScript, and the site displays loading states while content is on its way and clear error messages if something goes wrong. The home page introduces the store with a selection of jackets and the categories available to browse. Selecting a jacket opens its details page, where the visitor can read more about it before moving on to purchase.',
     thumbnail: '/interaction.jpg',
     github: 'https://github.com/Nikita-stud/Interaction-Design',
-    live_url: 'https://rainjackets.netlify.app/list-of-jackets',
+    live_url: 'https://rainjackets.netlify.app',
     date: '2024-10-13',
     status: 'Completed',
     Category: { id: 1, name: 'Front-end' },
