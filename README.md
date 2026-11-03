@@ -2,7 +2,7 @@
 
 This is my personal portfolio, built with Next.js and React and backed by a small MySQL database. It presents who I am, the stack I work with, how a project request goes from idea to launch, and a selection of my works, each with its own details page.
 
-Explore the website by visiting the link - [Fedorov Utvikler](ADD_LIVE_LINK_HERE)
+Explore the website by visiting the link - [Fedorov Utvikler](https://www.nikitafed.com/)
 
 ## Key Features
 
